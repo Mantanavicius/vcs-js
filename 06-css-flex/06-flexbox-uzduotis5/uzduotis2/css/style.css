@@ -1,0 +1,149 @@
+body,
+header,
+main,
+footer,
+section,
+nav,
+div {
+  display: flex;
+  font-family: "Montserrat";
+}
+body,
+main {
+  flex-direction: column;
+}
+body {
+  position: relative;
+}
+header {
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 80px;
+  position: absolute;
+  width: 100%;
+  top: 25px;
+  box-sizing: border-box;
+}
+header img {
+  width: 79px;
+}
+header ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 637px;
+}
+header nav ul li {
+  display: inline-block;
+}
+header nav a,
+header nav button {
+  font-size: 19px;
+  font-weight: 800;
+  line-height: 23.16px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+}
+header nav button {
+  background: #e12e60;
+  box-shadow: 0px 4px 4px 0px #00000040;
+  width: 195px;
+  height: 55px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+#hero {
+  background-image: url(../img/header-img.png);
+  background-size: cover;
+  min-height: 689px;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+#hero h1 {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 60.95px;
+  text-align: left;
+  max-width: 856px;
+  color: #fff;
+  text-shadow: 3px 2px 10px #00000040;
+  margin: 78px 60px;
+  box-sizing: border-box;
+}
+#text-section {
+  padding: 60px;
+  background: #ef5d69;
+}
+#paragraphs {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 60px 40px;
+  text-align: left;
+  border-radius: 8px;
+  gap: 60px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+#paragraphs p:nth-of-type(1) {
+  width: 540px;
+}
+#paragraphs p:nth-of-type(2) {
+  width: 260px;
+}
+#paragraphs p:nth-of-type(3) {
+  width: 321px;
+}
+p {
+  font-family: Roboto;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 22.27px;
+  text-align: left;
+  margin: 0;
+}
+#paint-section {
+  background: #fcdfe1;
+  padding: 128px 98px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+#paint-section p {
+  background: #fff;
+  padding: 65px 50px;
+  box-sizing: border-box;
+  flex: 1;
+}
+#paint-section img {
+  flex: 2;
+}
+footer {
+  background: #000;
+  padding: 16px 80px;
+  justify-content: space-between;
+  align-items: center;
+}
+#footer-logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 94px;
+  height: 81px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14.63px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  gap: 16px;
+}
+#footer-logo img {
+  width: 50px;
+}
+footer nav {
+  gap: 16px;
+}

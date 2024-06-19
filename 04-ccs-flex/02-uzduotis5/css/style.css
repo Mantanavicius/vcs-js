@@ -1,0 +1,43 @@
+body {
+  font-family: "Inter";
+  background-color: #e2e1e1;
+  text-align: center;
+}
+h2,
+h3 {
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0.20000000298023224px;
+  text-align: center;
+  color: #959393;
+}
+h1 {
+  display: inline-block;
+  font-family: Inter;
+  font-size: 128px;
+  font-weight: 700;
+  line-height: 128px;
+  text-align: center;
+  color: #121212;
+  margin: 0;
+}
+h3 {
+  color: #373636;
+}
+h2 {
+  margin-top: 90px;
+  margin-bottom: 0;
+}
+.hero {
+  margin: 0 auto;
+  padding: 0;
+  width: fit-content;
+  position: relative;
+}
+.hero img {
+  position: absolute;
+  top: 84px;
+  right: -4px;
+}

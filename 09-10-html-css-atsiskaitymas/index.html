@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/colors.css" />
+    <link rel="stylesheet" href="css/general-styles.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Elega - Modern Clothes</title>
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <header class="flex center">
+      <!-- mobile and tablet menu -->
+      <div class="container flex center">
+        <nav class="mobile">
+          <a href="#" class="icon" onclick="navi()">
+            <img src="img/hamburger-icon.svg" alt="hamburger-icon" />
+          </a>
+          <ul id="mobile-nav">
+            <li class="nav-item">
+              <a href="#"
+                >Men's <img src="img/dropdown-arrow.svg" alt="dropdown-arrow"
+              /></a>
+            </li>
+            <li class="nav-item">
+              <a href="#"
+                >Women's <img src="img/dropdown-arrow.svg" alt="dropdown-arrow"
+              /></a>
+            </li>
+            <li class="nav-item"><a href="#">Kid's</a></li>
+            <li class="nav-item"><a href="#">Winter</a></li>
+            <li class="nav-item"><a href="#">Summer</a></li>
+            <li class="nav-item"><a href="#">NEW Collections</a></li>
+          </ul>
+        </nav>
+        <!-- desktop menu -->
+        <a href="#">
+          <img id="logo" src="img/Elega.svg" alt="Elega logo" />
+        </a>
+        <nav class="desktop">
+          <ul class="flex">
+            <li class="nav-item">
+              <a href="#">
+                Men's <img src="img/dropdown-arrow.svg" alt="dropdown-arrow" />
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#">
+                Women's
+                <img src="img/dropdown-arrow.svg" alt="dropdown-arrow" />
+              </a>
+            </li>
+            <li class="nav-item"><a href="#">Kid's</a></li>
+            <li class="nav-item"><a href="#">Winter</a></li>
+            <li class="nav-item"><a href="#">Summer</a></li>
+            <li class="nav-item"><a href="#">NEW Collections</a></li>
+          </ul>
+        </nav>
+        <!-- user controls menu -->
+        <div class="user-menu flex">
+          <a href="#" class="heart"
+            ><img src="img/heart.svg" alt="heart" class="desktop"
+          /></a>
+          <div class="cart">
+            <a href="#"><img src="img/cart.svg" alt="cart" /></a>
+            <div id="cart-bubble" class="flex center circle">2</div>
+          </div>
+          <div class="user flex center">
+            <div class="profile-picture circle"></div>
+            <div class="user-details desktop desktop-small-hide flex column">
+              <p id="username">Samantha Johnson</p>
+              <a href="#">View profile</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- header end -->
+    <main class="flex center column">
+      <!-- hero section -->
+      <section id="hero" class="flex center">
+        <!-- left container -->
+        <div class="container flex center">
+          <div class="hero-text flex column">
+            <h4>Be extra</h4>
+            <h1>Modern Clothes</h1>
+            <p>
+              Elevate your style with our latest fashion arrivals, where quality
+              meets trendsetting designs. Discover the perfect outfit for every
+              occasion.
+            </p>
+            <form>
+              <input type="search" placeholder="Search for anything" /><button
+                class="flex center"
+              >
+                <img src="img/MagnifyingGlass.svg" alt="Search icon" /> search
+              </button>
+            </form>
+            <div class="scroll-for-more flex center desktop">
+              <img src="img/mouse.svg" alt="mouse icon" />Scroll for more
+            </div>
+          </div>
+          <!-- right container -->
+          <div class="hero-slides flex column">
+            <img src="img/hero-img.png" alt="Stylish woman with long hair" />
+            <!-- bubbles and navigation for sliders -->
+            <div class="slider-controls flex center">
+              <div class="progress-bubbles flex center">
+                <div class="bubble circle active"></div>
+                <div class="bubble circle"></div>
+                <div class="bubble circle"></div>
+                <div class="bubble circle"></div>
+              </div>
+              <div class="navigation desktop flex center">
+                <div id="navigation-left">
+                  <img src="img/left.svg" alt="left button" />
+                </div>
+                <div id="navigation-right">
+                  <img src="img/right.svg" alt="right button" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- hero end / collections start-->
+      <section id="collections">
+        <div class="container flex center">
+          <div class="collection">
+            <img src="img/collections-0.jpg" alt="corner of an image" />
+            <div class="collection-description"></div>
+          </div>
+          <div class="collection">
+            <img src="img/collections-1.jpg" alt="Stylish woman" />
+            <div class="collection-description">
+              <h4>Autumn</h4>
+              <h5>Collections</h5>
+            </div>
+          </div>
+          <div class="collection">
+            <img src="img/collections-2.jpg" alt="woman in a dress" />
+            <div class="collection-description">
+              <h4>Classic</h4>
+              <h5>Collections</h5>
+            </div>
+          </div>
+          <div class="collection">
+            <img src="img/collections-3.jpg" alt="man in a suit" />
+            <div class="collection-description">
+              <h4>Professional</h4>
+              <h5>Collections</h5>
+            </div>
+          </div>
+          <div class="navigation desktop flex center">
+            <div id="navigation-left">
+              <img src="img/left.svg" alt="left button" />
+            </div>
+            <div id="navigation-right">
+              <img src="img/right.svg" alt="right button" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- collections end / casual style start -->
+      <section id="casual-style" class="flex column center">
+        <div class="container-top flex">
+          <div class="line-heading flex center column">
+            <h2>Casual</h2>
+            <div class="flex center">
+              <hr />
+              <h3>Style</h3>
+            </div>
+          </div>
+          <div class="flex">
+            <h5 class="desktop">
+              Casual style is all about effortless comfort and laid-back
+              elegance, making it a perennial favorite for fashion-conscious
+              individuals seeking a versatile wardrobe. At our clothes e-shop,
+              we embrace the essence of casual fashion with a collection that
+              combines comfort and contemporary trends, featuring relaxed-fit
+              t-shirts, cozy sweaters, comfortable jeans, and stylish sneakers.
+              Whether you're running errands, meeting friends for a coffee, or
+              lounging at home, our casual clothing selection effortlessly
+              blends comfort and style. Explore our e-shop today for a modern
+              take on casual fashion.
+            </h5>
+            <h5 class="mobile">
+              Discover effortless comfort and style at our e-shop with our
+              curated casual collection. From relaxed-fit t-shirts to cozy
+              sweaters and stylish sneakers, we blend comfort and contemporary
+              trends seamlessly. Whether you're on the go or just relaxing,
+              explore our modern take on casual fashion today.
+            </h5>
+            <button>more</button>
+          </div>
+        </div>
+        <div class="products flex">
+          <div class="product">
+            <input type="checkbox" class="favorite-controls" checked />
+            <div class="new-in">NEW IN</div>
+            <img src="img/boots.jpg" alt="Black shoes" />
+            <div class="product-details flex center">
+              <div class="name-price flex">
+                <h3 class="product-name">Boots</h3>
+                <div class="product-price">239€</div>
+              </div>
+              <div class="rating-colors flex">
+                <div class="product-rating flex center">
+                  <p>5.0</p>
+                  <img src="img/start-filled.svg" alt="star" />
+                  <img src="img/start-filled.svg" alt="star" />
+                  <img src="img/start-filled.svg" alt="star" />
+                  <img src="img/start-filled.svg" alt="star" />
+                  <img src="img/start-filled.svg" alt="star" />
+                  <p>(52)</p>
+                </div>
+                <div class="product-colors flex center">
+                  <div class="color-bubble circle black selected"></div>
+                  <div class="color-bubble circle brown"></div>
+                  <div class="color-bubble circle white"></div>
+                </div>
+              </div>
+              <button class="mobile">ADD TO CART</button>
+            </div>
+          </div>
+
+          <div class="product">
+            <input type="checkbox" class="favorite-controls" />
+            <div class="new-in">NEW IN</div>
+            <img src="img/trousers.jpg" alt="trousers" />
+            <div class="product-details flex center">
+              <div class="name-price flex">
+                <h3 class="product-name">Trousers</h3>
+                <div class="product-price">250€</div>
+              </div>
+              <div class="rating-colors flex">
+                <div class="product-rating flex center">
+                  <p>5.0</p>
+                  <img src="img/start-filled.svg" alt="star" />
+                  <img src="img/start-filled.svg" alt="star" />
+                  <img src="img/start-filled.svg" alt="star" />
+                  <img src="img/start-filled.svg" alt="star" />
+                  <img src="img/start-filled.svg" alt="star" />
+                  <p>(200)</p>
+                </div>
+                <div class="product-colors flex center">
+                  <div class="color-bubble circle salmon selected"></div>
+                  <div class="color-bubble circle navy"></div>
+                  <div class="color-bubble circle charcoal"></div>
+                </div>
+              </div>
+              <button class="mobile">ADD TO CART</button>
+            </div>
+          </div>
+
+          <div class="product">
+            <input type="checkbox" class="favorite-controls" />
+            <img src="img/shirt.jpg" alt="t shirt" />
+            <div class="product-details flex center">
+              <div class="name-price flex">
+                <h3 class="product-name">T-shirts</h3>
+                <div class="product-price">
+                  59€ <span class="product-price-before">108€</span>
+                </div>
+              </div>
+              <div class="rating-colors flex">
+                <div class="product-rating flex center">
+                  <p>5.0</p>
+                  <img src="img/start-filled.svg" alt="star" />
+                  <img src="img/start-filled.svg" alt="star" />
+                  <img src="img/start-filled.svg" alt="star" />
+                  <img src="img/start-filled.svg" alt="star" />
+                  <img src="img/start-filled.svg" alt="star" />
+                  <p>(52)</p>
+                </div>
+                <div class="product-colors flex center">
+                  <div class="color-bubble circle black selected"></div>
+                  <div class="color-bubble circle magenta"></div>
+                  <div class="color-bubble circle banana"></div>
+                  <div class="color-bubble circle white"></div>
+                </div>
+              </div>
+              <button class="mobile">ADD TO CART</button>
+            </div>
+          </div>
+          <div class="mobile product">
+            <input type="checkbox" class="favorite-controls" />
+            <img src="img/spotted-boots.jpg" alt="spotted boots" />
+            <div class="product-details flex center">
+              <div class="name-price flex">
+                <h3 class="product-name">Boots</h3>
+                <div class="product-price">
+                  250€ <span class="product-price-before">500€</span>
+                </div>
+              </div>
+              <div class="rating-colors flex">
+                <div class="product-rating flex center">
+                  <p>5.0</p>
+                  <img src="img/start-filled.svg" alt="star" />
+                  <img src="img/start-filled.svg" alt="star" />
+                  <img src="img/start-filled.svg" alt="star" />
+                  <img src="img/start-filled.svg" alt="star" />
+                  <img src="img/start-filled.svg" alt="star" />
+                  <p>(32)</p>
+                </div>
+                <div class="product-colors flex center">
+                  <div class="color-bubble circle brown selected"></div>
+                  <div class="color-bubble circle charcoal"></div>
+                </div>
+              </div>
+              <button class="mobile">ADD TO CART</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="offers" class="flex center">
+        <div class="container">
+          <h2>
+            Up To <br />
+            70% OFF
+          </h2>
+          <h4>Autumn Offers</h4>
+          <div class="gradient1"></div>
+        </div>
+        <div class="img-container">
+            <img src="img/70p-off.png" alt="woman holding a bag" />
+            <div class="gradient2"></div>
+            <div class="gradient3"></div>
+        </div>
+      </section>
+      <section id="professional-style">
+        <div class="container-top flex">
+          <div class="line-heading flex center column">
+            <h2>Professional</h2>
+            <div class="flex center">
+              <hr />
+              <h3>Style</h3>
+            </div>
+          </div>
+          <div class="flex">
+            <h5 class="desktop">
+              Professional style embodies sophistication and polish, catering to
+              those who require a refined and put-together appearance for their
+              work or formal occasions. Our e-shop is dedicated to offering a
+              meticulously curated range of professional attire that seamlessly
+              blends professionalism with contemporary fashion trends. Our
+              collection includes tailored suits, crisp dress shirts, elegant
+              blouses, classic skirts, and tasteful accessories to help you make
+              a lasting impression in the workplace and beyond. Whether you're
+              attending meetings, conferences, or important presentations, our
+              professional attire ensures you exude confidence and competence.
+              Elevate your professional style with quality materials and
+              timeless designs from our e-shop, where sophistication meets
+              modernity. Explore our selection today and elevate your wardrobe
+              for the world of business and formal events.
+            </h5>
+            <h5 class="mobile">
+              Elevate your professional style with our meticulously curated e-shop collection. From tailored suits to elegant blouses, we seamlessly blend sophistication with contemporary trends. Make a lasting impression at work and beyond with our quality materials and timeless designs. Explore our selection today to enhance your business and formal wardrobe.
+            </h5>
+            
+            <button>more</button>
+          </div>
+        </div>
+        <div class="products flex">
+          <div class="product">
+            <input type="checkbox" class="favorite-controls" />
+            <img src="img/bowtie.png" alt="Bow tie" />
+            <div class="product-details flex center">
+              <div class="name-price flex">
+                <h3 class="product-name">Bow tie</h3>
+                <div class="product-price">
+                  23€ <span class="product-price-before">40€</span>
+                </div>
+              </div>
+              <div class="rating-colors flex">
+                <div class="product-rating flex center">
+                  <p>4.5</p>
+                  <img src="img/start-filled.svg" alt="star" />
+                  <img src="img/start-filled.svg" alt="star" />
+                  <img src="img/start-filled.svg" alt="star" />
+                  <img src="img/start-filled.svg" alt="star" />
+                  <img src="img/start-half.svg" alt="star" />
+                  <p>(202)</p>
+                </div>
+                <div class="product-colors flex center">
+                  <div class="color-bubble circle black selected"></div>
+                  <div class="color-bubble circle brown"></div>
+                  <div class="color-bubble circle white"></div>
+                  <div class="color-bubble circle navy"></div>
+                  <div class="color-bubble circle red"></div>
+                  <div class="color-bubble circle magenta"></div>
+                </div>
+              </div>
+              <button class="mobile">ADD TO CART</button>
+            </div>
+          </div>
+
+          <div class="product">
+            <input type="checkbox" class="favorite-controls" />
+            <div class="new-in">NEW IN</div>
+            <img src="img/shirts.png" alt="shirts" />
+            <div class="product-details flex center">
+              <div class="name-price flex">
+                <h3 class="product-name">Shirts</h3>
+                <div class="product-price">180€</div>
+              </div>
+              <div class="rating-colors flex">
+                <div class="product-rating flex center">
+                  <p>5.0</p>
+                  <img src="img/start-filled.svg" alt="star" />
+                  <img src="img/start-filled.svg" alt="star" />
+                  <img src="img/start-filled.svg" alt="star" />
+                  <img src="img/start-filled.svg" alt="star" />
+                  <img src="img/start-filled.svg" alt="star" />
+                  <p>(150)</p>
+                </div>
+                <div class="product-colors flex center">
+                  <div class="color-bubble circle lightblue selected"></div>
+                  <div class="color-bubble circle charcoal"></div>
+                </div>
+              </div>
+              <button class="mobile">ADD TO CART</button>
+            </div>
+          </div>
+
+          <div class="product">
+            <input type="checkbox" class="favorite-controls" />
+            <img src="img/suit.png" alt="suit" />
+            <div class="product-details flex center">
+              <div class="name-price flex">
+                <h3 class="product-name">Suit</h3>
+                <div class="product-price">
+                  1305€ <span class="product-price-before">1528€</span>
+                </div>
+              </div>
+              <div class="rating-colors flex">
+                <div class="product-rating flex center">
+                  <p>5.0</p>
+                  <img src="img/start-filled.svg" alt="star" />
+                  <img src="img/start-filled.svg" alt="star" />
+                  <img src="img/start-filled.svg" alt="star" />
+                  <img src="img/start-filled.svg" alt="star" />
+                  <img src="img/start-filled.svg" alt="star" />
+                  <p>(15)</p>
+                </div>
+                <div class="product-colors flex center">
+                  <div class="color-bubble circle lightpurple selected"></div>
+                  <div class="color-bubble circle darkblue"></div>
+                  <div class="color-bubble circle darkgreen"></div>
+                  <div class="color-bubble circle salmon"></div>
+                </div>
+              </div>
+              <button class="mobile">ADD TO CART</button>
+            </div>
+          </div>
+          <div class="mobile product">
+            <input type="checkbox" class="favorite-controls" />
+            <div class="new-in">NEW IN</div>
+            <img src="img/boots.jpg" alt="spotted boots" />
+            <div class="product-details flex center">
+              <div class="name-price flex">
+                <h3 class="product-name">Boots</h3>
+                <div class="product-price">239€</div>
+              </div>
+              <div class="rating-colors flex">
+                <div class="product-rating flex center">
+                  <p>5.0</p>
+                  <img src="img/start-filled.svg" alt="star" />
+                  <img src="img/start-filled.svg" alt="star" />
+                  <img src="img/start-filled.svg" alt="star" />
+                  <img src="img/start-filled.svg" alt="star" />
+                  <img src="img/start-filled.svg" alt="star" />
+                  <p>(52)</p>
+                </div>
+                <div class="product-colors flex center">
+                  <div class="color-bubble circle black selected"></div>
+                  <div class="color-bubble circle brown"></div>
+                  <div class="color-bubble circle white"></div>
+                </div>
+              </div>
+              <button class="mobile">ADD TO CART</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="heels" class="flex">
+        <div class="container-top flex column">
+          <div class="line-heading flex center column">
+            <h2>Stepping Up in Style</h2>
+            <div class="flex center">
+              <hr />
+              <h3>Women's High Heels</h3>
+            </div>
+          </div>
+          <div class="flex">
+            <h5>
+              From classic stilettos to trendy block heels, our collection
+              caters to all tastes and occasions. With a focus on quality,
+              comfort, and the latest trends, our high heels are a symbol of
+              empowerment and self-expression. Elevate your style confidently
+              with our Women's High Heels Collection.
+            </h5>
+            <button>shop collection</button>
+          </div>
+        </div>
+        <div class="image-container">
+          <img src="img/high-heels.png" alt="high heels shoes" />
+        </div>
+      </section>
+    </main>
+    <footer class="flex column center">
+      <hr>
+      <div class="container flex">
+        <div class="menu">
+          Menu
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Career</a></li>
+            <li><a href="#">Investors</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Contacts</a></li>
+          </ul>
+        </div>
+        <div class="account">
+          Account
+          <ul>
+            <li><a href="#">Log in</a></li>
+            <li><a href="#">Sign up</a></li>
+            <li><a href="#">Cart</a></li>
+            <li><a href="#">Orders history</a></li>
+            <li><a href="#">Favorites</a></li>
+            <li><a href="#">Discounts</a></li>
+            <li><a href="#">Newsletter</a></li>
+          </ul>
+        </div>
+        <div class="help">
+          <ul>
+            Help
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & conditions</a></li>
+            <li><a href="#">Shipping policy</a></li>
+            <li><a href="#">Return policy</a></li>
+            <li><a href="#">Order</a></li>
+          </ul>
+        </div>
+        <div class="contact-and-socials">
+          Contact Us
+          <ul>
+            <li><a href="#">info@elega.com</a></li>
+            <li><a href="#">+37065498329</a></li>
+            <li><a href="#">(10:30 AM- 7:30 PM)</a></li>
+          </ul>
+          Social media
+          <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+           <li><a href="#">Pintrest</a></li>
+            <li><a href="#">Tiktok</a></li>
+          </ul>
+      </div>
+    </footer>
+  </body>
+</html>

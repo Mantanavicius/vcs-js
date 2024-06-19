@@ -1,0 +1,38 @@
+div {
+  display: flex;
+}
+#row1,
+#row3 {
+  background-color: orange;
+}
+#row2,
+#row4 {
+  background-color: red;
+}
+#row2 {
+  justify-content: space-around;
+  padding: 10px;
+}
+#row2 p {
+  background-color: #fff;
+  margin: 10px;
+}
+#row3 {
+  padding: 10px 50px;
+  justify-content: center;
+}
+#row3 p {
+  background-color: #fff;
+  width: 600px;
+  padding: 10px;
+}
+#row4 {
+  padding: 20px;
+  justify-content: space-around;
+}
+#row4 p {
+  padding: 10px;
+  margin: 10px;
+  width: 350px;
+  background-color: orange;
+}

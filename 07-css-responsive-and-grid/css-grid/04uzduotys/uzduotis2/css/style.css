@@ -1,0 +1,57 @@
+body {
+  background: #feeead;
+}
+div {
+  border-radius: 5px;
+}
+/* sprendimas gc + gr */
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 75px);
+  gap: 5px;
+}
+.red {
+  background: red;
+  grid-column: 1/-1;
+}
+.blue {
+  background: blue;
+  grid-column: 1/3;
+  grid-row: 2/4;
+}
+.green {
+  background: green;
+  grid-column: 3/5;
+}
+.purple {
+  background: purple;
+  grid-row: span 1;
+}
+/* sprendimas area */
+/* .container {
+  display: grid;
+  gap: 5px;
+  grid-template-areas:
+    "r r r r"
+    "b b g g"
+    "b b p p";
+  grid-auto-rows: 75px;
+}
+.red {
+  background: red;
+  grid-area: r;
+}
+.blue {
+  background: blue;
+  grid-area: b;
+}
+.green {
+  background: green;
+  grid-area: g;
+}
+.purple {
+  background: purple;
+  grid-area: p;
+  grid-column: span 1;
+} */

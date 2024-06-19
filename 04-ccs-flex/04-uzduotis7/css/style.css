@@ -1,0 +1,80 @@
+body {
+  font-family: "Inter";
+  text-align: center;
+  scroll-behavior: smooth;
+}
+h1 {
+  font-size: 128px;
+  font-weight: 400;
+  line-height: 128px;
+  letter-spacing: 0.2px;
+  text-align: center;
+  margin: 0;
+  padding: calc(50vh - 128px) 0;
+}
+section {
+  height: 100vh;
+}
+section:nth-of-type(1) {
+  background-color: #ffffff;
+}
+section:nth-of-type(2) {
+  background-color: #51cb65;
+}
+section:nth-of-type(3) {
+  background-color: #816ef5;
+}
+section:nth-of-type(4) {
+  background-color: #ea7b7b;
+}
+section:nth-of-type(5) {
+  background-color: #d9d9d9;
+  color: #e41111;
+}
+nav {
+  position: fixed;
+  bottom: 90px;
+  width: 100%;
+  height: min-content;
+  padding: 0;
+}
+.menu {
+  background: #f5f3f3;
+  width: 505px;
+  height: 58px;
+  padding: 8px;
+  margin: 6px 83px 0 0;
+  box-sizing: border-box;
+  border-radius: 16px;
+  display: inline-block;
+  vertical-align:top
+}
+.menu button {
+  width: 93px;
+  height: 42px;
+  border-radius: 12px;
+  border: 2px solid #f17965;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 26px;
+  letter-spacing: -0.05em;
+  color: #f17965;
+  cursor: pointer;
+  text-decoration: none;
+}
+#arrow-up {
+  display: inline-block;
+  /* position: absolute; */
+  width: 64px;
+  height: 64px;
+  box-sizing: border-box;
+  border: 3px solid #959393;
+  border-radius: 50%;
+  background: #fff;
+}
+nav > a img {
+  width: 32px;
+  height: 32px;
+  background: none;
+  padding: 13px 13px 13px 13px;
+}

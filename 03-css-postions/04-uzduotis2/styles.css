@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+h2 {
+  font-size: 2em;
+}
+ul li {
+  display: inline-block;
+  margin: 0 20px;
+}
+ul li a {
+  text-decoration: none;
+  color: rgb(0, 174, 255);
+}
+header,
+footer {
+  margin: 10px auto;
+}
+main {
+  height: 75vh;
+  background-image: url(img/sea.jpg);
+  background-size: cover;
+  background-position: 40%;
+}
+section {
+  width: 200px;
+  text-align: right;
+  height: fit-content;
+  position: absolute;
+  background-color: black;
+  top: 20%;
+  right: 20%;
+  padding: 10px;
+}
+section h2 {
+  font-size: 2em;
+  line-height: 0.5;
+  margin: 0;
+}
+section p {
+  margin: 0;
+}
+footer p {
+  width: 600px;
+  margin: 10px auto;
+}

@@ -1,0 +1,138 @@
+body {
+  font-family: "Roboto";
+}
+.brand {
+  font-family: "Roboto condensed";
+}
+.navbar .container .navbar-nav .active {
+  color: #43c45f;
+}
+.navbar-toggler {
+  border: none;
+}
+#hero {
+  min-height: 800px;
+  background-image: url(../img/bg1.png);
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+#hero h1 {
+  font-size: 70px;
+  margin: 0;
+}
+#hero p {
+  color: #d5d7d8;
+  font-size: 26px;
+  margin-top: 33px;
+  margin-bottom: 49px;
+}
+#hero button {
+  background: #43c45f;
+  padding: 14px 50px;
+}
+#ad-type-section {
+  padding: 129px 0;
+  background: #fff;
+}
+.ad-item h4 {
+  font-weight: 500;
+  font-size: 22px;
+  color: #404445;
+  margin: 18px 0 10px 0;
+}
+.ad-item p {
+  color: #5f6b81;
+}
+
+#video-box {
+  position: relative;
+}
+#play-btn {
+  cursor: pointer;
+  border-radius: 50%;
+}
+#play-btn:hover {
+  opacity: 0.85;
+}
+#vaizdai,
+#galerija {
+  background: #f1f8ff;
+  padding: 112px 0;
+}
+#vaizdai h2,
+#galerija h2 {
+  font-size: 40px;
+}
+#vaizdai p,
+#galerija p {
+  font-size: 18px;
+  margin: 25px 0 54px;
+  color: #5f6b81;
+}
+#statistika {
+  background: #fff;
+  padding: 112px 0;
+}
+#statistika h4 {
+  font-size: 22px;
+  font-weight: 400;
+  color: #404445;
+}
+#statistika h2 {
+  font-size: 40px;
+  font-weight: 500;
+  color: #404445;
+  margin: 28px 0 0;
+}
+hr {
+  color: #d8d8d8;
+  margin: 53px 0;
+}
+#statistika .stats-item h3 {
+  margin: 19px 0 10px;
+  font-size: 25px;
+  color: #404445;
+}
+#statistika .stats-item p {
+  margin: 0;
+  color: #5f6b81;
+  font-size: 18px;
+}
+
+/* tablet */
+@media all and (max-width: 992px) {
+  #ad-type-section {
+    padding: 93px 0;
+  }
+  #vaizdai {
+    padding: 93px 0 112px;
+  }
+  #statistika {
+    padding: 93px 0;
+  }
+}
+/* mobile */
+@media all and (max-width: 768px) {
+  #hero h1 {
+    font-size: 54px;
+  }
+  #ad-type-section,
+  #statistika {
+    padding: 64px 0;
+  }
+  .stats {
+    row-gap: 49px;
+  }
+  #vaizdai {
+    padding: 64px 0 73px;
+  }
+  #vaizdai h2,
+  #statistika h2,
+  #galerija h2,
+  #prenumeruoti h2,
+  #komanda h2,
+  #pakalbekite h2 {
+    font-size: 34px;
+  }
+}

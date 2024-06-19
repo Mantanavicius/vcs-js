@@ -1,0 +1,29 @@
+p {
+  background-color: lightgray;
+  padding: 25px;
+  border: 5px solid brown;
+  margin-bottom: 50px;
+}
+button {
+  font-size: 20px;
+  padding: 15px 50px;
+  border-radius: 8px;
+  border: none;
+  background-color: lightblue;
+  color: #fff;
+
+ /* centravimui */
+
+  /* display: block;
+  margin: 0 auto; */
+
+  /* ARBA */
+ 
+
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: blue;
+  text-align: center;
+}

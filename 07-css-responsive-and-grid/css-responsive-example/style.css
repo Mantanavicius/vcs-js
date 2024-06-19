@@ -1,0 +1,32 @@
+body {
+  background: lightgray;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.flex-container {
+  display: flex;
+}
+.mobile {
+  display: none;
+}
+@media all and (max-width: 1200px) {
+  body {
+    background: beige;
+  }
+}
+@media all and (max-width: 900px) {
+  body {
+    background: lightcyan;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+}

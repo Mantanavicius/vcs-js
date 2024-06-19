@@ -1,0 +1,43 @@
+html,
+body {
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+}
+article {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 0;
+  box-shadow: 2px 2px 20px gray;
+}
+img {
+  width: 100%;
+}
+.img-block {
+  max-width: 400px;
+  position: relative;
+  width: auto;
+  padding: 0;
+  margin: 0;
+  height: 300px;
+  background-size: cover;
+}
+.img-block p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+}
+.text-block {
+  background-color: beige;
+  margin: 0;
+  padding: 10px;
+}
+.text-block p,
+.text-block h2 {
+  margin: 0;
+  padding: 10px 0;
+}

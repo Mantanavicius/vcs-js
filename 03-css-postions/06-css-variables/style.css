@@ -1,0 +1,58 @@
+:root {
+  --red: #ff6f69;
+  --beige: #ffeead;
+  --yellow: #ffcc5c;
+}
+.grid {
+  --columns: 200px 200px;
+}
+
+html,
+body {
+  background: var(--beige);
+  color: var(--red);
+}
+
+h2,
+p {
+  color: var(--red);
+}
+
+#navbar {
+  --nav-red: #ff6f19;
+}
+
+#navbar a {
+  color: var(--nav-red);
+}
+
+.item {
+  --red: #ff8e69;
+  --item-yellow: #fffc5c;
+  background: var(--item-yellow);
+}
+
+button {
+  background: var(--red);
+  color: var(--item-yellow);
+}
+.featured {
+  --item-yellow: #ffe55b;
+  --red: #ff5564;
+}
+.grid {
+  display: grid;
+  grid-template-columns: var(--columns);
+  grid-auto-rows: 140px;
+  grid-gap: 20px;
+  justify-content: center;
+}
+
+@media all and (max-width: 650px) {
+  .grid {
+    --columns: 300px;
+  }
+  :root {
+    --beige: #fffead;
+  }
+}

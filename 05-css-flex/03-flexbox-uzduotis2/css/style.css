@@ -1,0 +1,35 @@
+body {
+  display: flex;
+  flex-direction: column;
+}
+div {
+  padding: 0 20px;
+  height: 300px;
+  display: flex;
+}
+p {
+  background-color: #fff;
+  width: 25%;
+  padding: 20px 0px;
+}
+#container-1 {
+  background-color: #ff9f2c;
+}
+#container-2 {
+  background-color: #85b990;
+  justify-content: flex-end;
+}
+#container-3 {
+  background-color: #ff8727;
+  align-items: center;
+}
+#container-4 {
+  background-color: #00ced0;
+  justify-content: center;
+  align-items: center;
+}
+#container-5 {
+  background-color: #f11140;
+  justify-content: flex-end;
+  align-items: flex-end;
+}

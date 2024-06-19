@@ -1,0 +1,254 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  margin: 0;
+}
+header,
+main,
+section,
+footer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+main,
+section {
+  flex-direction: column;
+}
+h2,
+h3 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+}
+h2 {
+  font-size: 80px;
+  line-height: 80px;
+  letter-spacing: 3px;
+}
+h3 {
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: 2px;
+}
+header {
+  position: absolute;
+  width: 100%;
+  top: 38px;
+  justify-content: space-around;
+}
+header #logo a img {
+  width: 84px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 67.25px;
+}
+#lang-and-socials select option,
+#lang-and-socials select,
+a {
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+}
+/* NEEDS FIXING for transparent bg */
+#lang-and-socials {
+  display: flex;
+}
+#lang-and-socials select,
+#lang-and-socials select option {
+  border: none;
+  text-align: left;
+}
+#lang-and-socials select {
+  background: none;
+  border-right: 1px solid #ffffff;
+}
+#lang-and-socials select option {
+  background: black;
+}
+#lang-and-socials select option:hover {
+  color: #ffb548;
+}
+#lang-and-socials a,
+#lang-and-socials a img {
+  width: 30px;
+  height: 30px;
+}
+#lang-and-socials a:first-of-type {
+  padding: 0 17px 0 29px;
+}
+
+#survive {
+  background-image: radial-gradient(
+      189.96% 61.18% at 50% 38.82%,
+      rgba(255, 181, 72, 0) 0%,
+      rgba(52, 44, 29, 0.80319) 73.22%,
+      #08090a 99.74%
+    ),
+    url(../img/bg-image-1.jpg);
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+}
+#hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#hero-text h2 {
+  margin: 485px 0 0;
+}
+#hero-text h3 {
+  margin: 0 0 28px 0;
+  width: 100%;
+}
+#survive button {
+  background: linear-gradient(194.68deg, #ffb548 11.27%, #f3af34 90.4%);
+  font-weight: bold;
+  height: 60px;
+  width: 260px;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 514px;
+}
+.side-line {
+  padding-right: 11px;
+  margin-right: 12px;
+  border-right: 1px solid black;
+}
+.see-more {
+  text-align: justified;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 62px;
+}
+.see-more img {
+  width: 20px;
+}
+#social-battle {
+  background-image: radial-gradient(
+      136.03% 54.57% at 50% 48.04%,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(0, 0, 0, 0) 60.63%,
+      #080a0b 99.74%
+    ),
+    linear-gradient(0deg, rgba(9, 10, 12, 0.9), rgba(9, 10, 12, 0.9)),
+    url(../img/bg-image-2.png);
+  background-size: cover;
+  background-position: center;
+  padding: 285px 0;
+  flex-direction: row;
+  justify-content: center;
+}
+#social-battle-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+}
+#social-battle-text hr {
+  width: 125%;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  z-index: 4;
+}
+#social-battle-text h2,
+h3 {
+  margin: 12px 0 0;
+  width: 410px;
+}
+#social-battle-text p {
+  width: 365px;
+  align-self: end;
+  text-align: justify;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 22px;
+  text-align: justified;
+  padding-right: 74px;
+  margin-top: 95px;
+}
+#social-battle-text p strong {
+  font-weight: 700;
+}
+#gallery {
+  width: 699px;
+  height: 707px;
+  position: relative;
+}
+#gallery img {
+  position: absolute;
+  border-radius: 5px;
+}
+#gallery img:nth-of-type(1) {
+  width: 581px;
+  height: 707px;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+#gallery img:nth-of-type(2) {
+  width: 507px;
+  height: 652px;
+  top: 24px;
+  left: 105px;
+  z-index: 2;
+}
+#gallery img:nth-of-type(3) {
+  width: 507px;
+  height: 592px;
+  top: 55px;
+  left: 130px;
+  z-index: 1;
+}
+#gallery img:nth-of-type(4) {
+  width: 16px;
+  height: 40px;
+  top: 348px;
+  right: 0;
+  z-index: 1;
+}
+.progress-bar {
+  position: absolute;
+  width: 326px;
+  bottom: 33px;
+  left: 137px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 4;
+}
+.bubble {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid white;
+  gap: 61px;
+}
+.filled {
+  background: #ffffff;
+}
+.progress-line {
+  width: 30px;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  left: 16px;
+  bottom: 8px;
+}
+#features{
+  background-image: url(../img/);
+}
