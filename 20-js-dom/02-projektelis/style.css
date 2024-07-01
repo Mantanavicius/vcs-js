@@ -1,0 +1,88 @@
+body {
+  font-family: "Kanit", sans-serif;
+  background: linear-gradient(#ec8989, #9198e5);
+  margin: 20px;
+  min-height: 100vh;
+  height: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0;
+  margin: 0;
+}
+body > div {
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 15px;
+  padding: 1em 2em;
+  margin: 2em auto;
+  max-width: 800px;
+}
+input {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  padding: 5px;
+  margin-right: 5px;
+  height: 30px;
+  box-sizing: border-box;
+}
+button {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  text-align: center;
+  background: linear-gradient(#9198e5, #ec8989);
+  color: white;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex {
+  display: flex;
+}
+.center {
+  justify-content: center;
+  align-items: center;
+}
+#title svg {
+  height: 2em;
+  padding-left: 20px;
+}
+#zmones {
+  justify-content: space-around;
+  gap: 20px;
+}
+#zmones #pridetiZmogu p {
+  margin-bottom: 1em;
+}
+#zmones .errorExists {
+  color: crimson;
+  margin-top: 1em;
+  display: none;
+}
+#pridetiZmones {
+  padding: 0;
+}
+.person {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin: 10px 0;
+}
+.removeBtn {
+  font-weight: normal;
+}
+#mokejimai {
+  justify-content: space-around;
+}
+#mokejimai .inputs{
+}
+#mokejimai .outputs {
+  display: none;
+}

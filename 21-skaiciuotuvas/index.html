@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skaičiuotuvas</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="calculator">
+      <div class="input-row">
+        <span id="calculation"></span>
+        <input type="text" id="calc-input" readonly />
+      </div>
+      <div class="buttons">
+        <button onclick="onCleanClick()">C</button>
+        <button onclick="onActionClick('sq')">x<sup>2</sup></button>
+        <button onclick="onActionClick('sqrt')">&#8730;</button>
+        <button onclick="backspace()">⌫</button>
+        <button onclick="onNumberClick(7)">7</button>
+        <button onclick="onNumberClick(8)">8</button>
+        <button onclick="onNumberClick(9)">9</button>
+        <button onclick="onActionClick('/')">/</button>
+        <button onclick="onNumberClick(4)">4</button>
+        <button onclick="onNumberClick(5)">5</button>
+        <button onclick="onNumberClick(6)">6</button>
+        <button onclick="onActionClick('x')">x</button>
+        <button onclick="onNumberClick(1)">1</button>
+        <button onclick="onNumberClick(2)">2</button>
+        <button onclick="onNumberClick(3)">3</button>
+        <button onclick="onActionClick('-')">-</button>
+        <button onclick="onNumberClick('.')">.</button>
+        <button onclick="onNumberClick(0)">0</button>
+        <button onclick="onCountClick()">=</button>
+        <button onclick="onActionClick('+')">+</button>
+      </div>
+      <div class="history">
+        <button id="show-history" onclick="toggleHistory()">
+          Rodyti istoriją
+        </button>
+        <span id="emptyHistory">Istorija yra tusčia</span>
+        <div class="history-items"></div>
+        <button id="clearHistory" onclick="clearHistory()">
+          išvalyti istoriją
+        </button>
+      </div>
+    </div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>

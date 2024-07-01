@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="style.css" />
+    <script
+      src="scripts.js"
+      defer></script>
+  </head>
+  <body>
+    <main>
+      <section id="recipes">
+        <h2>Pasirinkite receptą:</h2>
+        <div class="recipes-wrapper">
+          <div class="recipe">
+            <img
+              src="img/salotos.png"
+              alt="salotos" />
+            <h3>Vištiena su salotom</h3>
+            <p>
+              Amet et at aliquam duis ut morbi turpis. Quis cursus tincidunt
+              risus purus faucibus elit ut. Pellentesque montes.
+            </p>
+          </div>
+          <div class="recipe">
+            <img
+              src="img/tortas.png"
+              alt="tortas" />
+            <h3>Tortas su mėlynėm</h3>
+            <p>
+              Amet et at aliquam duis ut morbi turpis. Quis cursus tincidunt
+              risus purus faucibus elit ut. Pellentesque montes.
+            </p>
+            <div class="selected"></div>
+          </div>
+          <div class="recipe">
+            <img
+              src="img/makaronai.png"
+              alt="makaronai" />
+            <h3>Makaronai su mėsa</h3>
+            <p>
+              Amet et at aliquam duis ut morbi turpis. Quis cursus tincidunt
+              risus purus faucibus elit ut. Pellentesque montes.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="porcijos">
+        <h2>Kiek porcijų gaminsite?</h2>
+        <div id="range-output">2</div>
+        <input
+          type="range"
+          min="1"
+          max="10"
+          step="1"
+          value="2"
+          id="range" />
+      </section>
+      <section class="ingredientai">
+        <h2>Jums reikės šių ingredientų, tokiais kiekiais:</h2>
+        <ul id="recipe-output"></ul>
+      </section>
+    </main>
+  </body>
+</html>

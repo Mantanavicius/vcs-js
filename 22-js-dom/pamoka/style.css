@@ -1,0 +1,59 @@
+body {
+  background-color: #f8f8f8;
+  margin: 0;
+  padding: 0;
+}
+.page-content {
+  background: #fff;
+  width: 100%;
+  max-width: 600px;
+  margin: 50px auto;
+}
+h1 {
+  padding: 20px 30px;
+  margin: 0;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.item-wrapper:not(:last-child) {
+  border-bottom: 1px solid #e3e3e3;
+}
+.item-wrapper {
+  padding: 15px 30px;
+}
+.item-wrapper p {
+  margin: 2px 0;
+}
+p.id,
+p.when {
+  font-size: 12px;
+}
+p.type {
+  font-size: 16px;
+}
+p.amount {
+  font-size: 20px;
+}
+
+.income {
+  color: green;
+}
+.expense {
+  color: red;
+}
+
+.balance-wrapper{
+    background-color: #ededed;
+    padding: 20px 30px;
+}
+h3{
+    margin: 0;
+}
+
+form {
+    padding: 15px 30px;
+    border-bottom: 1px solid #e3e3e3;
+}
+form input, form button{
+    border-radius: 5px;
+}

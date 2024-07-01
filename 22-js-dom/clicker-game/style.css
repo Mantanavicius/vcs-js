@@ -1,0 +1,43 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: brown;
+  font-family: "Roboto";
+}
+.game {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+}
+.factory {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 2em;
+  margin: 2em;
+  border-radius: 15px;
+}
+.factory button {
+  background: #cecece;
+  border-radius: 5px;
+  padding: 5px;
+}
+.main-game {
+  text-align: center;
+}
+.main-game .click-zone {
+  background: #f31a1a;
+  width: 500px;
+  height: 500px;
+  cursor: pointer;
+  border-radius: 25px;
+}
+.main-game .score {
+  font-size: 2em;
+  margin: 1em;
+}
+.won {
+  background-color: green;
+}
