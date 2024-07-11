@@ -1,0 +1,16 @@
+.product-wrapper {
+  display: flex;
+  justify-content: space-between;
+  box-shadow: inset 0 0 5px 10px whitesmoke;
+  align-items: center;
+  padding: 20px 5%;
+}
+.info-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.product-wrapper img{
+    border-radius: 50%;
+    border: 5px solid crimson;
+}

@@ -1,0 +1,20 @@
+.prekiu-wrapper h2 {
+  text-align: center;
+  text-decoration: underline crimson;
+}
+
+.prekiu-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  gap: 20px;
+  justify-content: center;
+}
+.prekes-blokas {
+  box-shadow: inset 0 0 5px 5px white;
+  padding: 20px;
+  border-radius: 25px;
+}
+.prekes-blokas h3 {
+  font-style: oblique;
+}

@@ -1,0 +1,32 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    border-radius: 25px;
+    gap: 10px;
+    width: 215px;
+}
+.card img{
+    height: 100px;
+}
+.price{
+    font-weight: bold;
+}
+.title{
+    height: 50px;
+    font-size: 14px;
+    line-height: 1.1;
+    text-align: center;
+    margin-top: 1em;
+
+}
+.card button{
+    background-color: green;
+    border-radius: 5px;
+    color: white;
+    padding: 5px;
+    width: 50%;
+}

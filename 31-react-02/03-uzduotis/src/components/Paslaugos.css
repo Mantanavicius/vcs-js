@@ -1,0 +1,26 @@
+.paslaugos {
+  background-image: url(https://plus.unsplash.com/premium_photo-1681566925312-948c8a896b37?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  filter: grayscale(50%);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-color: #fff;
+  background-blend-mode: exclusion;
+}
+.paslaugos h2 {
+    font-style: italic;
+  background-color: #00000083;
+  text-transform: uppercase;
+  font-size: 50px;
+  text-align: center;
+  padding: 20px;
+  color: white;
+}
+
+.paslaugos-wrapper {
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}

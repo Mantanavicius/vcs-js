@@ -1,0 +1,17 @@
+.paslauga-wrapper{
+    text-align: center;
+    background-color: rgba(245, 245, 245, 0.849);
+    color: black;
+    border-radius: 30px;
+    padding: 20px 10px 0;
+    width: 250px;
+    box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.692);
+}
+.paslauga-wrapper h3{
+    font-style: oblique;
+    text-decoration: underline;
+}
+.paslauga-wrapper p{
+    text-align: center;
+    padding: 10px;
+}

@@ -1,0 +1,14 @@
+.footer-wrapper{
+    display: flex;
+    gap: 25px;
+    background-color: #000;
+    padding: 25px;
+    justify-content: space-around;
+}
+
+.footer-wrapper ul{
+    width: 30%;
+}
+.footer-wrapper p{
+    width: 30%;
+}

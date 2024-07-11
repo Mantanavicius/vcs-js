@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="style.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"
+      defer></script>
+    <script
+      src="app.js"
+      defer></script>
+    <title>axios post</title>
+  </head>
+  <body>
+    <form>
+      New product: <br /><br />
+      Title:
+      <input
+        type="text"
+        id="title" />
+      <br />
+      Price:
+      <input
+        type="number"
+        id="price" />
+      <br />
+      Amount:
+      <input
+        type="number"
+        id="amount" />
+      <br />
+      Discount:
+      <input
+        type="number"
+        id="discount"
+        min="0"
+        max="100" />
+      <br />
+      Description:
+      <input
+        type="text"
+        name="description"
+        id="description" />
+      <br />
+      <button>post</button>
+    </form>
+  </body>
+</html>
