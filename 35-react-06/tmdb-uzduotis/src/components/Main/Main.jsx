@@ -21,10 +21,10 @@ const Main = ({ searchTerm }) => {
           params: {
             api_key: API_KEY,
             language: "en-US",
-            query: searchTerm,
-            page: 1,
+            query: searchTerm
           },
         });
+        console.log(response.data)
         setMovies(response.data.results.slice(0, 10));
       } catch (error) {
         setError("Failed to fetch movies");
@@ -39,7 +39,7 @@ const Main = ({ searchTerm }) => {
   }
 
   return (
-    <div className="movie-list">
+    <main className="movie-list">
       <h2>Popular Movies</h2>
       <ul>
         {movies.map((movie) => (
@@ -55,7 +55,7 @@ const Main = ({ searchTerm }) => {
           </li>
         ))}
       </ul>
-    </div>
+    </main>
   );
 };
 
