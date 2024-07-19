@@ -1,0 +1,40 @@
+{
+  "receptai": [
+    {
+      "id": 1,
+      "pavadinimas": "Vištiena su salotom",
+      "img": "/img/salotos.png",
+      "description": "Amet et at aliquam duis ut morbi turpis. Quis cursus tincidunt risus purus faucibus elit ut. Pellentesque montes.",
+      "ingredients": [
+        { "name": "Vištienos", "qty": 100, "unit": "g" },
+        { "name": "Salotos", "qty": 100, "unit": "g" },
+        { "name": "Citrinų sulčių", "qty": 1, "unit": "šaukštelio(-ių)" },
+        { "name": "Garstyčių-medaus padažo", "qty": 2, "unit": "šaukštelių" }
+      ]
+    },
+    {
+      "id": 2,
+      "pavadinimas": "Tortas su mėlynėm",
+      "img": "/img/tortas.png",
+      "description": "Amet et at aliquam duis ut morbi turpis. Quis cursus tincidunt risus purus faucibus elit ut. Pellentesque montes.",
+      "ingredients": [
+        { "name": "Miltų", "qty": 250, "unit": "g" },
+        { "name": "Kiaušinių", "qty": 1, "unit": "vnt." },
+        { "name": "Mėlynių", "qty": 50, "unit": "g" },
+        { "name": "Cukraus", "qty": 1, "unit": "šaukštelių" }
+      ]
+    },
+    {
+      "id": 3,
+      "pavadinimas": "Makaronai su mėsa",
+      "img": "/img/makaronai.png",
+      "description": "Amet et at aliquam duis ut morbi turpis. Quis cursus tincidunt risus purus faucibus elit ut. Pellentesque montes.",
+      "ingredients": [
+        { "name": "Makaronų", "qty": 250, "unit": "g" },
+        { "name": "Jautienos faršo", "qty": 250, "unit": "g" },
+        { "name": "Pomidorų pastos", "qty": 50, "unit": "g" },
+        { "name": "Tarkuoto sūrio", "qty": 50, "unit": "g" }
+      ]
+    }
+  ]
+}

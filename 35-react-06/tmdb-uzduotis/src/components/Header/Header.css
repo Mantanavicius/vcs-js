@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+header {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  box-sizing: border-box;
+  background-color: #1e1e1e;
+  color: white;
+  padding: 30px;
+  gap: 30px;
+}
+
+header .title {
+  display: flex;
+  background-color: #f5c518;
+  width: 100px;
+  height: 60px;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s all;
+}
+header .title:hover {
+  transition: 0.2s all;
+  box-shadow: inset 0 0 10px 10px #fcda5eda;
+}
+header .title h2 {
+  color: #000;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  letter-spacing: -3px;
+  font-size: 34px;
+  text-align: center;
+}
