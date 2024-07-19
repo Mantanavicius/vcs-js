@@ -12,8 +12,8 @@ function App() {
     }
   };
 
-  const searchForSingleChar = () => {
-    setSearchTerm("");
+  const searchForSingleChar = (singleChar) => {
+    setSearchTerm(singleChar);
   };
 
   return (

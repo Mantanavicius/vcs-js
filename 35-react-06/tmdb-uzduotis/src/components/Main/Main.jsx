@@ -3,7 +3,6 @@ import axios from "axios";
 import "./Main.css";
 import PropTypes from "prop-types";
 
-
 const API_KEY = "53c258bb52d305146e19a71e58aa2cc5";
 const BASE_URL = "https://api.themoviedb.org/3";
 
@@ -61,7 +60,7 @@ const Main = ({ searchTerm }) => {
 };
 
 Main.propTypes = {
-  searchTerm: PropTypes.func,
+  searchTerm: PropTypes.string,
 };
 
 export default Main;
