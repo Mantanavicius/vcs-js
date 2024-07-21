@@ -4,47 +4,49 @@ import PropTypes from "prop-types";
 import { LuSearch } from "react-icons/lu";
 import { MdClear } from "react-icons/md";
 
-const SearchBar = (props) => {
+const SearchBar = ({ searchTerm }) => {
   const searchRef = useRef();
-  const [searchTerm, setSearchTerm] = useState("");
-  //for clear button display
+  const [searchInput, setSearchInput] = useState("");
+
   const searchHandler = () => {
-    setSearchTerm(searchRef.current.value);
-    props.searchTerm(searchRef.current.value);
+    const newValue = searchRef.current.value;
+    setSearchInput(newValue);
+    if (newValue.length >= 2 || newValue.length === 0) {
+      searchTerm(newValue);
+    }
   };
-  const searchSingleChar = (e) => {
-    e.preventDefault();
-    props.searchForSingleChar();
+
+  const clearHandler = () => {
+    searchRef.current.value = "";
+    setSearchInput("");
+    searchTerm("");
   };
+
   return (
     <div className="search-bar-wrapper">
-      <form
-        className="search-bar"
-        onSubmit={searchSingleChar}>
+      <div className="search-bar">
         <LuSearch className="icon" />
         <input
           type="text"
           placeholder="Search"
           ref={searchRef}
           onChange={searchHandler}
+          value={searchInput}
         />
-        {searchTerm.length > 0 && (
+        {searchInput.length > 0 && (
           <MdClear
             id="clear"
             className="icon"
-            onClick={() => {
-              searchRef.current.value = "";
-            }}
+            onClick={clearHandler}
           />
         )}
-      </form>
+      </div>
     </div>
   );
 };
 
 SearchBar.propTypes = {
-  searchTerm: PropTypes.func,
-  searchForSingleChar: PropTypes.func,
+  searchTerm: PropTypes.func.isRequired,
 };
 
 export default SearchBar;

@@ -2,14 +2,7 @@ import "./Header.css";
 import SearchBar from "../SearchBar/SearchBar";
 import PropTypes from "prop-types";
 
-const Header = (props) => {
-  const searchTermHandler = (searchTerm) => {
-    props.searchTerm(searchTerm);
-  };
-  const searchForSingleChar = () => {
-    props.searchForSingleChar();
-  };
-
+const Header = ({ searchTerm }) => {
   return (
     <header>
       <a href="/">
@@ -17,17 +10,13 @@ const Header = (props) => {
           <h2>TMDb</h2>
         </div>
       </a>
-      <SearchBar
-        searchTerm={searchTermHandler}
-        searchForSingleChar={searchForSingleChar}
-      />
+      <SearchBar searchTerm={searchTerm} />
     </header>
   );
 };
 
 Header.propTypes = {
-  searchTerm: PropTypes.func,
-  searchForSingleChar: PropTypes.func,
+  searchTerm: PropTypes.func.isRequired,
 };
 
 export default Header;
