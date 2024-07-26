@@ -1,0 +1,111 @@
+.kontaktai .secondary-header {
+  background: url(src/assets/labirintas.jpg) no-repeat center;
+  background-size: cover;
+}
+.kontaktai .kontaktai-wrapper {
+  max-width: 1320px;
+  display: flex;
+  gap: 40px;
+  padding: 57px 0;
+  margin: 0 auto;
+  color: #262020;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.kontaktai .kont-rek-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 780px;
+}
+.kontaktai .kont-rek-wrapper > img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+.kontaktai-wrapper h2 {
+  font-size: 30px;
+  line-height: 40px;
+  margin-bottom: 3px;
+}
+.kontaktai-wrapper form h2 {
+  color: #292929;
+}
+.kontaktai .kont-rek,
+.kontaktai form {
+  background-color: #ffffff;
+  border-radius: 6px;
+  box-shadow: 0px 0px 20px 0px #7a74741a;
+  display: flex;
+}
+.kontaktai .kont-rek {
+  gap: 151px;
+  padding: 59px 116px 32px;
+  box-sizing: content-box;
+}
+.kontaktai .kont-rek .label {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 5px;
+}
+.kontaktai .kont-rek .contact {
+  color: #00d4e4;
+}
+.kontaktai .kont {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 215px;
+}
+.kontaktai .kont .kontaktas {
+  display: flex;
+  flex-direction: column;
+}
+.kontaktai .kont .kontaktas .icon-contact {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.kontaktai .kont .kontaktas .icon-contact img {
+  height: 20px;
+  align-self: flex-start;
+}
+
+.kontaktai .rek {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 215px;
+}
+
+.kontaktai form {
+  flex-direction: column;
+  padding: 59px 50px 95px;
+  width: 500px;
+}
+
+.kontaktai form h2 {
+  margin-bottom: 28px;
+}
+.kontaktai form input:first-of-type {
+  margin-bottom: 12px;
+}
+
+.kontaktai form input {
+  width: 100%;
+  height: 40px;
+  border-radius: 6px;
+  border: 0.5px solid #999999;
+  margin-top: 8px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+.kontaktai form input[type="text"]:last-of-type {
+  height: 142px;
+  margin-bottom: 30px;
+}
+.kontaktai form button {
+  width: 184px;
+}
