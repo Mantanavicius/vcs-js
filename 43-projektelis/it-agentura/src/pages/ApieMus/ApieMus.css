@@ -1,0 +1,264 @@
+.first .container {
+  align-items: center;
+  margin-top: 60px;
+}
+
+.first .container .top {
+  height: 706px;
+  border-radius: 20px;
+  padding: 92px 72px;
+  gap: 41px;
+  margin-bottom: 167px;
+}
+
+.first .container .top .text {
+  max-width: 566px;
+}
+.first h2 {
+  margin-top: 8px;
+  margin-bottom: 24px;
+}
+.first .rating-block {
+  margin-top: 40px;
+  align-items: center;
+  gap: 12px;
+}
+.first .rating-block h5 {
+  margin-bottom: 2px;
+}
+.first .pics {
+  position: relative;
+  width: 721px;
+}
+.first .pics img {
+  position: absolute;
+}
+.first .pics img:nth-of-type(1) {
+  top: 0;
+  left: 0;
+}
+.first .pics img:nth-of-type(2) {
+  top: 34px;
+  left: 81px;
+}
+.first .pics img:nth-of-type(3) {
+  top: 66px;
+  left: 153px;
+}
+
+.first .stats {
+  gap: 66px;
+  text-align: center;
+  margin-bottom: 107px;
+}
+.first .stats h3 {
+  font-size: 45px;
+  line-height: 52.7px;
+}
+.first .stats h6 {
+  font-size: 25px;
+  line-height: 29.28px;
+  margin: 16px 0;
+}
+.first .stats p {
+  max-width: 383px;
+}
+.second .container {
+  padding-top: 100px;
+  padding-bottom: 133px;
+  gap: 19px;
+}
+.second .misija h2 {
+  max-width: 568px;
+  margin-top: 24px;
+  margin-bottom: 32px;
+}
+.second .misija > p {
+  margin-bottom: 48px;
+  max-width: 540px;
+}
+.second .misija ul {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  max-width: 644px;
+  height: 164px;
+  gap: 8px;
+}
+.second .misija ul li p {
+  padding-left: 21px;
+  margin-bottom: 2px;
+  height: 46px;
+  max-width: 297px;
+  position: relative;
+}
+.second .misija ul li p::before {
+  content: url("src/assets/orange-check.png");
+  position: absolute;
+  left: 0;
+  top: 2px;
+}
+.second .pics {
+  position: relative;
+  height: 737px;
+  width: 725px;
+}
+.second .pics img,
+.second .pics .nariai {
+  position: absolute;
+}
+.second .pics img:nth-of-type(1) {
+  top: 0;
+  left: 0;
+}
+.second .pics img:nth-of-type(2) {
+  bottom: 0;
+  right: 0;
+}
+.second .nariai {
+  left: 316px;
+  top: 71px;
+  width: 200px;
+  height: 116px;
+  border-radius: 20px;
+  text-align: center;
+  padding: 20px 17px 23px;
+}
+.second .nariai > div {
+  position: relative;
+  margin-top: 10px;
+  width: 165px;
+  height: 40px;
+}
+.second .nariai > div img:nth-of-type(6) {
+  right: 0;
+}
+.second .nariai > div img:nth-of-type(5) {
+  right: 25px;
+  z-index: 1;
+}
+.second .nariai > div img:nth-of-type(4) {
+  right: 50px;
+  z-index: 2;
+}
+.second .nariai > div img:nth-of-type(3) {
+  right: 75px;
+  z-index: 3;
+}
+.second .nariai > div img:nth-of-type(2) {
+  right: 100px;
+  z-index: 4;
+}
+.second .nariai > div img:nth-of-type(1) {
+  right: 125px;
+  z-index: 5;
+}
+.second .projektai,
+.second .pokalbiai {
+  position: absolute;
+  bottom: 44px;
+  left: 245px;
+  width: 141px;
+  height: 143px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+}
+.second .projektai h3,
+.second .pokalbiai h3 {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 52.7px;
+  width: fit-content;
+}
+.second .projektai p,
+.second .pokalbiai p {
+  font-size: 16px;
+  line-height: 21px;
+  max-width: 105px;
+}
+.second .pokalbiai {
+  justify-content: start;
+  height: 120px;
+  width: 155px;
+  left: 36.48px;
+  bottom: 112px;
+  padding-right: 20px;
+  box-sizing: content-box;
+  border-right: 1px solid #fff;
+}
+.third .container {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.third h2 {
+  text-align: center;
+  margin-bottom: 80px;
+}
+.third .ppl {
+  gap: 74px;
+  margin-bottom: 100px;
+}
+
+.third .ppl .person {
+  position: relative;
+}
+.third .person .socials {
+  position: absolute;
+  display: flex;
+  gap: 20px;
+  right: 16px;
+  top: 15px;
+}
+.third .socials img {
+  width: 35px;
+}
+.third .person h5 {
+  margin-top: 16px;
+  margin-bottom: 10px;
+}
+.pradekime {
+  height: 209px;
+  border-radius: 20px;
+  text-align: center;
+  background-image: url("src/assets/about-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom 35%;
+  position: relative;
+}
+.pradekime::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--secondary);
+  opacity: 0.9;
+  border-radius: 20px;
+  z-index: 0;
+}
+.pradekime .content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  padding-top: 45px;
+}
+.pradekime h3 {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 52.7px;
+  margin-bottom: 24px;
+}
+.pradekime a {
+  display: inline-block;
+  font-size: 18px;
+  line-height: 24px;
+  width: 115px;
+  height: 47px;
+  padding: 12px 16px;
+}

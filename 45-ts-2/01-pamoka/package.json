@@ -1,0 +1,18 @@
+{
+  "devDependencies": {
+    "@types/node": "^22.0.0"
+  },
+  "name": "01-pamoka",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "undici-types": "^6.11.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "description": ""
+}

@@ -1,0 +1,83 @@
+.kontaktai {
+  margin-top: 78px;
+  margin-bottom: 102px;
+
+  .top {
+    align-items: center;
+    gap: 137px;
+    width: 100%;
+
+    .pasikalbekime {
+      max-width: 468px;
+      margin-bottom: 132px;
+
+      .text {
+        gap: 32px;
+      }
+
+      .contacts {
+        border-top: 1px solid #dfdfdf;
+        border-bottom: 1px solid #dfdfdf;
+        margin: 32px 0;
+        padding: 32px 0;
+        gap: 20px;
+
+        .contact {
+          gap: 29px;
+          align-items: center;
+        }
+
+        h5 {
+          margin-bottom: 2px;
+        }
+
+        a {
+          font-size: 16px;
+          line-height: 20.83px;
+        }
+      }
+
+      .socials {
+        gap: 40px;
+      }
+    }
+  }
+  form {
+    width: 795px;
+    height: 528px;
+    border-radius: 20px;
+    background: #f4f4f4;
+    padding: 45px 35px 50px 45px;
+
+    .sender-info {
+      gap: 64px;
+
+      div {
+        width: 100%;
+      }
+    }
+
+    label, input {
+      font-size: 18px;
+      line-height: 23.44px;
+    }
+    input {
+      height: 50px;
+      background: transparent;
+      border: 0;
+      border-bottom: 1px solid #dfdfdf;
+      margin-bottom: 55px;
+      line-height: 50px;
+    }
+    input:focus {
+      outline: none;
+      border-bottom: 1px solid #000;
+    }
+    button {
+      width: 139px;
+      height: 47px;
+      font-size: 18px;
+      line-height: 23.44px;
+    }
+  }
+}

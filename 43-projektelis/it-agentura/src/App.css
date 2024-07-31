@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap");
+* {
+  --primary: #fff;
+  --secondary: #0c1a3a;
+  --tertiary: #f4f4f4;
+  --accent: #ff6600;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+}
+
+body {
+  background: var(--primary);
+  height: 100vh;
+}
+.container {
+  max-width: 1400px;
+  display: flex;
+  margin: 0 auto;
+  box-sizing: content-box;
+  padding: 0 25px;
+}
+.dark {
+  background: var(--secondary);
+  color: var(--primary);
+}
+.light {
+  background: var(--primary);
+  color: var(--secondary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span {
+  font-family: "Roboto Serif", serif;
+  font-weight: 600;
+}
+
+p {
+  font-size: 18px;
+  line-height: 23.44px;
+}
+.p-small {
+  font-size: 16px;
+  line-height: 20.83px;
+}
+.p-big {
+  font-size: 20px;
+  line-height: 26.04px;
+}
+button,
+.btn {
+  cursor: pointer;
+  border-radius: 23px;
+  padding: 8px 16px;
+  border: 0;
+}
+
+button:hover,
+.btn:hover {
+  background: var(--accent);
+  color: var(--secondary);
+}
+
+.btn-long {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 288px;
+  height: 48px;
+  font-size: 20px;
+  line-height: 26px;
+  gap: 10px;
+  padding: 10px;
+  padding-right: 20px;
+
+  .deco {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: url(src/assets/button-deco.svg);
+  }
+  &:hover .deco {
+    background: url(src/assets/button-deco-hover.svg);
+  }
+}
+.btn-long.dark {
+  .deco {
+    background: url(src/assets/button-deco-light.svg);
+  }
+  &:hover .deco {
+    background: url(src/assets/button-deco-hover.svg);
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul li {
+  list-style-type: none;
+}
+h1 {
+  font-size: 77px;
+  line-height: 90px;
+  font-weight: 700;
+}
+h2 {
+  font-size: 64px;
+  line-height: 75px;
+}
+h3 {
+  font-size: 45px;
+  line-height: 52.7px;
+}
+h4 {
+  font-size: 30px;
+  line-height: 35px;
+}
+h5 {
+  font-size: 20px;
+  line-height: 23.42px;
+}
+h6 {
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 29.28px;
+}
+.ot {
+  color: var(--accent);
+}
+.flex {
+  display: flex;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+}
+.radius {
+  border-radius: 20px;
+}
+.error {
+  margin-top: 50px;
+  padding: 50px;
+  gap: 50px;
+
+  button {
+    width: 139px;
+    height: 47px;
+  }
+}

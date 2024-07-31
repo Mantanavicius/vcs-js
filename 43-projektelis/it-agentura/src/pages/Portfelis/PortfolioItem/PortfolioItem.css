@@ -1,0 +1,71 @@
+.debesu-sprendimai {
+  .hero-img {
+    position: relative;
+    margin-top: 43px;
+    margin-bottom: 130px;
+    height: 590px;
+  }
+
+  .about-work {
+    position: absolute;
+    gap: 40px;
+    justify-content: center;
+    width: 100%;
+    bottom: -54px;
+
+    .about-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 97px;
+      width: fit-content;
+      border-radius: 15px;
+      gap: 11px;
+      padding: 20px 30px;
+    }
+  }
+
+  .description {
+    gap: 80px;
+
+    .description-item {
+      gap: 24px;
+    }
+    .description-item:nth-of-type(2) {
+      gap: 32px;
+
+      p:nth-of-type(2) {
+        max-width: 664px;
+      }
+    }
+  }
+  .project-images {
+    justify-content: center;
+    text-align: center;
+    .top {
+      gap: 74px;
+      margin-bottom: 68px;
+    }
+    .bot {
+      margin-top: 80px;
+      margin-bottom: 100px;
+      gap: 47px;
+      text-align: left;
+
+      .darbas h4 {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 442px;
+        margin-bottom: 10px;
+      }
+      .darbas > img {
+        width: 442px;
+        height: 442px;
+        object-fit: cover;
+        border-radius: 20px;
+        margin-bottom: 16px;
+      }
+    }
+  }
+}

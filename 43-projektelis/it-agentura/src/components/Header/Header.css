@@ -1,0 +1,22 @@
+.header-wrapper {
+  .container,
+  .navigation {
+    justify-content: space-between;
+    align-items: center;
+  }
+  .container {
+    height: 54px;
+    padding-top: 25px;
+    gap: 20px;
+  }
+  .navigation {
+    max-width: 609px;
+    gap: 30px;
+    font-size: 20px;
+    line-height: 26.04px;
+
+    .active:not(.btn) {
+      color: var(--accent);
+    }
+  }
+}
