@@ -1,0 +1,17 @@
+<%- include('./partials/head.ejs') %>  
+<%- include('./partials/nav.ejs') %> 
+
+    <div class="create-blog content">
+        <form action="/blogs" method="POST">
+            <label for="title">Pamokos pavadinimas</label>
+            <input type="text" id="title" name="title" required />
+            <label for="santrauka">Santrauka</label>
+            <input type="text" id="santrauka" name="santrauka" required />
+            <label for="body">Turinys</label>
+            <textarea id="body" name="body" required></textarea>
+            <button>Kurti pamoką</button>
+        </form>
+    </div>
+
+<%- include('./partials/footer.ejs') %>
+
