@@ -1,0 +1,665 @@
+1. Parašykite MongoDB užklausą, kad būtų rodomi visi kolekcijos restoranai dokumentai.
+
+db.restaurants.find()
+
+2. Parašykite MongoDB užklausą, kad būtų rodomi visų dokumentų atributai: restaurant_id, name, borough ir cuisine.
+
+db.restaurants.find({},{
+    restaurant_id:1,
+    name:1,
+    borough:1,
+    cuisine:1
+})
+
+3. Parašykite MongoDB užklausą, kad būtų rodomi visų dokumentų atributai: restaurant_id, name, borough ir cuisine, bet neįtraukite _id atributo.
+
+db.restaurants.find({},{
+    _id:0
+    restaurant_id:1,
+    name:1,
+    borough:1,
+    cuisine:1
+})
+
+4. Parašykite MongoDB užklausą, kad būtų rodomi visų dokumentų atributai: restaurant_id, name, borough ir zip code, bet neįtraukite _id atributo.
+
+db.restaurants.find({},{
+    _id:0
+    restaurant_id:1,
+    name:1,
+    borough:1,
+    "address.zipcode":1
+})
+
+5. Parašykite MongoDB užklausą, kad būtų rodomi visi restoranai, esantys Bronx borough.
+
+db.restaurants.find({borough:"Bronx"})
+
+6. Parašykite MongoDB užklausą, kad būtų rodomi pirmi 5 restoranai, esantys Bronx borough.
+
+db.restaurants.find({borough:"Bronx"}).limit(5)
+
+7. Parašykite MongoDB užklausą, kad būtų rodomi sekantys 5 restoranai (praleiskite pirmuosius 5) esančius Bronx borough. (skip)
+
+db.restaurants.find({borough:"Bronx"}).limit(5).skip(5)
+
+8. Parašykite MongoDB užklausą, kad surastumėte restoranus, kurių score yra daugiau nei 90.
+
+db.restaurants.find({"grades.score":"{$gt: 90}"})
+
+9. Parašykite MongoDB užklausą, kad surastumėte restoranus, kurių score yra daugiau nei 80, bet mažiau nei 100.
+
+db.restaurants.find({$and:[
+    {"grades.score":{$gt:80}},
+    {"grades.score":{$lt:100}}
+]})
+
+10. Parašykite MongoDB užklausą, kad surastumėte restoranus, kurių platumos reikšmė mažesnė nei -95.754168.
+
+db.restaurants.find({"address.coord.0":{$lt: -95.754168}})
+
+11. Parašykite MongoDB užklausą, kad surastumėte restoranus, kurių cuisine nėra American, jų score yra daugiau nei 70, ir platumos reikšmė mažesnė nei -65.754168.
+
+db.restaurants.find({
+  $and: [
+    { cuisine: { $ne: "American" } },
+    { "grades.score": { $gt: 70 } },
+    { "address.coord.0": { $lt: -65.754168 } }
+  ]
+})
+
+
+12. Parašykite MongoDB užklausą, kad surastumėte restoranus, kurių cuisine nėra American, jų score yra daugiau nei 70, ir platumos reikšmė mažesnė nei -65.754168. Tačiau savo sprendime nenaudokite $and operatoriaus.
+
+db.restaurants.find({
+  cuisine: { $ne: "American" },
+  "grades.score": { $gt: 70 },
+  "address.coord.0": { $lt: -65.754168 }
+})
+
+13. Parašykite MongoDB užklausą, kad surastumėte restoranus, kurių cuisine nėra American, turi grade A, nepriklausančius Brooklyn borough. Surūšiuokite pagal cuisine nuo galo.
+
+db.restaurants.find({
+  cuisine: { $ne: "American" },
+  "grades.grade": "A",
+  "borough": { $ne: "Brooklyn" }
+}).sort({ cuisine: -1 })
+
+14. Parašykite MongoDB užklausą, kad būtų rodomi atributai: restaurant_id, name, borough ir cuisine tų restoranų, kurių pirmos trys pavadinimo raidės yra 'Wil'.
+
+db.restaurants.find({
+  name: /^Wil/ 
+}, {
+  _id: 0,
+  restaurant_id: 1,
+  name: 1,
+  borough: 1,
+  cuisine: 1
+})
+
+15. Parašykite MongoDB užklausą, kad būtų rodomi atributai: restaurant_id, name, borough ir cuisine tų restoranų, kurių paskutinės trys pavadinimo raidės yra 'ces'.
+
+db.restaurants.find({
+  name: /ces$/ 
+}, {
+  _id: 0,
+  restaurant_id: 1,
+  name: 1,
+  borough: 1,
+  cuisine: 1
+})
+
+16. Parašykite MongoDB užklausą, kad būtų rodomi atributai: restaurant_id, name, borough ir cuisine tų restoranų, kurių pavadinime (bet kur) yra raidės 'Reg'.
+
+db.restaurants.find({
+  name: /reg/i
+}, {
+  _id: 0,
+  restaurant_id: 1,
+  name: 1,
+  borough: 1,
+  cuisine: 1
+})
+
+
+17. Parašykite MongoDB užklausą, kad surastumėte restoranus, kurių cuisine yra arba American, arba Chinese.
+
+db.restaurants.find({$or:[
+  {cuisine: "American"},
+  {cuisine: "Chinese"}
+]})
+
+18. Parašykite MongoDB užklausą, kad būtų rodomi atributai: restaurant_id, name, borough ir cuisine tų restoranų, kurių borough yra Staten Island arba Queens, arba Bronx, arba Brooklyn.
+
+db.restaurants.find({
+  $or:[
+    {borough: "Staten Island"},
+    {borough: "Queens"},
+    {borough: "Bronx"},
+    {borough: "Brooklyn"}
+  ]
+}, {
+  _id: 0,
+  restaurant_id: 1,
+  name: 1,
+  borough: 1,
+  cuisine: 1
+})
+
+
+19. Parašykite MongoDB užklausą, kad būtų rodomi atributai: restaurant_id, name, borough ir cuisine tų restoranų, kurių borough nėra Staten Island arba Queens, arba Bronx, arba Brooklyn.
+
+db.restaurants.find({
+  $and:[
+    {borough: {$ne: "Staten Island"}},
+    {borough: {$ne: "Queens"}},
+    {borough: {$ne: "Bronx"}},
+    {borough: {$ne: "Brooklyn"}}
+  ]
+}, {
+  _id: 0,
+  restaurant_id: 1,
+  name: 1,
+  borough: 1,
+  cuisine: 1
+})
+
+
+20. Parašykite MongoDB užklausą, kad būtų rodomi atributai: restaurant_id, name, borough ir cuisine tų restoranų, kurių score nėra didesnis už 10.
+
+db.restaurants.find({
+  "grades.score": {$lte: 10}
+},{
+  _id: 0,
+  restaurant_id: 1,
+  name: 1,
+  borough: 1,
+  cuisine: 1
+})
+
+21. Parašykite MongoDB užklausą, kad surastumėte restoranus, kurių cuisine nėra American arba Chinese, arba kurių pavadinimo pirmos trys raidės nėra 'Wil'.
+
+db.restaurants.find({
+  $or: [
+    {"cuisine": {$nin: ["American", "Chinese"]}},
+    {"name": {$not: /^Wil/ }}
+  ]
+})
+
+
+22. Parašykite MongoDB užklausą, kad būtų rodomi atributai: restaurant_id, name, grade, tų restoranų, kurių grade yra A ir score yra 11, o ISODate "2014-08-11T00:00:00Z".
+
+db.restaurants.find({
+  "grades.grade": "A",
+  "grades.score": 11,
+  "grades.date": ISODate("2014-08-11T00:00:00Z")
+}, {
+
+  restaurant_id: 1,
+  name: 1,
+  grades: 1
+})
+
+23. Parašykite MongoDB užklausą, kad būtų rodomi atributai: restaurant_id, name, address ir location, tų restoranų, kurių koordinačių masyvo antrojo elemento reikšmė yra didesnė nei 42, bet ne didesnė nei 52.
+
+db.restaurants.find({
+  "address.coord.1": { $gt: 42, $lte: 52 }
+}, {
+  _id:0,
+  restaurant_id: 1,
+  name: 1,
+  address: 1,
+  location: 1
+})
+
+24. Surūšiuokite visus restoranus pagal jų pavadinimus abėcėline tvarka su visais jų duomenimis.
+
+db.restaurants.find().sort({name:1})
+
+25. Surūšiuokite visus restoranus pagal jų pavadinimus abėcėline tvarka nuo kito galo su visais jų duomenimis.
+
+db.restaurants.find().sort({name:-1})
+
+26. Parašykite MongoDB užklausą, kad sužinotumėte, ar visuose adresuose yra street, ar ne.
+
+db.restaurants.find({"address.street":{$exists:false}}).count()
+
+27. Parašykite MongoDB užklausą, kad būtų rodomi atributai: restaurant_id, name, grade, tų restoranų, kurių score dalinasi iš 7.
+
+db.restaurants.find({
+  "grades.score": {$mod: [7, 0]}
+}, {
+  _id:0,
+  restaurant_id: 1,
+  name: 1,
+  grades: 1
+})
+
+28. Parašykite MongoDB užklausą, kad būtų rodomi atributai: name, borough, longitude, latitude ir cuisine tų restoranų, kurių pavadinime (bet kur) yra raidės 'mon'.
+
+db.restaurants.find({
+  name: /mon/i
+},{
+  _id:0,
+  name: 1,
+  borough:1,
+  "address.coord.longitude.1":1,
+  "address.coord.latitude.0":1,
+  cuisine:1
+})
+
+29. Parašykite MongoDB užklausą, kad būtų rodomi atributai: name, borough, longitude, latitude ir cuisine tų restoranų, kurių pavadinimo pirmos trys raidės yra 'Mad'.
+
+db.restaurants.find({
+  name: /^Mad/i
+},{
+  _id:0,
+  name: 1,
+  borough:1,
+  "address.coord.longitude.1":1,
+  "address.coord.latitude.0":1,
+  cuisine:1
+})
+
+30. Parašykite MongoDB užklausą, kad būtų rodomas name tų restoranų, kurių bent vienas score yra mažiau nei 5.
+
+db.restaurants.find({
+  name: /^Mad/i
+},{
+  _id:0,
+  name: 1,
+  borough:1,
+  "address.coord.longitude.1":1,
+  "address.coord.latitude.0":1,
+  cuisine:1
+})
+
+31. Parašykite MongoDB užklausą, kad būtų rodomas name tų restoranų, kurių bent vienas score yra mažiau nei 5, o borough yra Manhattan.
+
+db.restaurants.find(
+  {"grades.score": { $lt: 5 }},
+  {
+    "_id": 0,
+    "name": 1
+})
+
+32. Parašykite MongoDB užklausą, kad būtų rodomas name tų restoranų, kurių bent vienas score yra mažiau nei 5, o borough yra Manhattan arba Brooklyn.
+
+db.restaurants.find(
+  {$and:[
+    {"grades.score": { $lt: 5 }},
+    {borough: {$in: ["Manhattan", "Brooklyn"]}}
+  ]},{
+    "_id": 0,
+    "name": 1
+})
+
+33. Parašykite MongoDB užklausą, kad būtų rodomas name tų restoranų, kurių bent vienas score yra mažiau nei 5, borough yra Manhattan arba Brooklyn, o cuisine nėra American.
+
+db.restaurants.find(
+  {$and:[
+    {"grades.score": { $lt: 5 }},
+    {borough: {$in: ["Manhattan", "Brooklyn"]}},
+    {cuisine: {$ne: "American"}}
+  ]},{
+    "_id": 0,
+    "name": 1
+})
+
+
+34. Parašykite MongoDB užklausą, kad būtų rodomas name tų restoranų, kurių bent vienas score yra mažiau nei 5, borough yra Manhattan arba Brooklyn, o cuisine nėra American arba Chinese.
+
+db.restaurants.find(
+  {$and:[
+    {"grades.score": { $lt: 5 }},
+    {borough: {$in: ["Manhattan", "Brooklyn"]}},
+    {cuisine: {$nin: ["American", "Chinese"]}}
+  ]},{
+    "_id": 0,
+    "name": 1
+})
+
+35. Parašykite MongoDB užklausą, kad būtų rodomas name tų restoranų, kurių bent vienas score yra 2 ir 6.
+
+db.restaurants.find(
+  {$and:[
+      { "grades.score": 2 },
+      { "grades.score": 6 }
+    ]
+  },{
+    "_id": 0,
+    "name": 1
+})
+
+
+36. Parašykite MongoDB užklausą, kuri surastų kiekvieno restorano score vidurkį.
+
+db.restaurants.aggregate([
+  {
+    $project: {
+      _id:0,
+      name: 1,
+      average_score: {$avg: "$grades.score"}
+    }
+  }
+])
+
+37. Parašykite MongoDB užklausą, kuri surastų kiekvieno restorano aukščiausią score.
+
+db.restaurants.aggregate([
+  {
+    $project: {
+      _id:0,
+      name: 1,
+      max_score: {$max: "$grades.score"}
+    }
+  }
+])
+
+38. Parašykite MongoDB užklausą, kuri surastų kiekvieno restorano žemiausią score.
+
+db.restaurants.aggregate([
+  {
+    $project: {
+      _id:0,
+      name: 1,
+      min_score: {$min: "$grades.score"}
+    }
+  }
+])
+
+39. Parašykite MongoDB užklausą, kuri suskaičiuotų kiek yra restoranų kiekviename borough.
+
+db.restaurants.aggregate([
+  {$group: {
+    _id: "$borough",
+    count: {$sum:1}
+    }},
+  {
+    $sort: {count:-1}
+    }
+])
+
+40. Parašykite MongoDB užklausą, kuri suskaičiuotų kiek yra restoranų pagal kiekvieną cuisine.
+
+
+db.restaurants.aggregate([
+  {$group: {
+    _id: "$cuisine",
+    count: {$sum:1}
+    }},
+  {
+    $sort: {count:-1}
+    }
+])
+
+41. Parašykite MongoDB užklausą, kuri suskaičiuotų kiek yra restoranų, gavusių grade A pagal kiekvieną cuisine.
+
+db.restaurants.aggregate([
+  {$match: {"grades.grade": "A"}},
+  {
+    $group: {
+      _id: "$cuisine",
+      count: { $sum: 1 }
+    }
+  },
+  {$sort: {count: -1}}
+])
+
+42. Parašykite MongoDB užklausą, kuri suskaičiuotų kiek yra restoranų, gavusių grade A pagal kiekvieną borough.
+
+db.restaurants.aggregate([
+  {$match: {"grades.grade": "A"}},
+  {
+    $group: {
+      _id: "$borough",
+      count: { $sum: 1 }
+    }
+  },
+  {$sort: {count: -1}}
+])
+
+43. Parašykite MongoDB užklausą, kuri surastų kiekvieno cuisine score vidurkį.
+
+db.restaurants.aggregate([
+  {$unwind: "$grades"},
+  {
+    $group: {
+      _id: "$cuisine",
+      average_score: { $avg: "$grades.score" }
+    }
+  },
+  {$sort: { average_score: -1 }}
+])
+
+44. Parašykite MongoDB užklausą, kuri surastų kiekvieno cuisine aukščiausią score.
+
+db.restaurants.aggregate([
+  {$unwind: "$grades"},
+  {
+    $group: {
+      _id: "$cuisine",
+      max_score: { $max: "$grades.score" }
+    }
+  },
+  {$sort: { max_score: -1 }}
+])
+
+45. Parašykite MongoDB užklausą, kuri surastų kiekvieno cuisine žemiausią score.
+
+db.restaurants.aggregate([
+  {$unwind: "$grades"},
+  {
+    $group: {
+      _id: "$cuisine",
+      min_score: { $min: "$grades.score" }
+    }
+  },
+  {$sort: { min_score: -1 }}
+])
+
+46. Parašykite MongoDB užklausą, kuri surastų kiekvieno borough score vidurkį.
+
+db.restaurants.aggregate([
+  {$unwind: "$grades"},
+  {
+    $group: {
+      _id: "$borough",
+      average_score: { $avg: "$grades.score" }
+    }
+  },
+  {$sort: { average_score: -1 }}
+])
+
+47. Parašykite MongoDB užklausą, kuri surastų kiekvieno borough aukščiausią score.
+
+db.restaurants.aggregate([
+  {$unwind: "$grades"},
+  {
+    $group: {
+      _id: "$borough",
+      max_score: { $max: "$grades.score" }
+    }
+  },
+  {$sort: { max_score: -1 }}
+])
+
+48. Parašykite MongoDB užklausą, kuri surastų kiekvieno borough žemiausią score.
+
+db.restaurants.aggregate([
+  {$unwind: "$grades"},
+  {
+    $group: {
+      _id: "$borough",
+      min_score: { $min: "$grades.score" }
+    }
+  },
+  {$sort: { min_score: -1 }}
+])
+
+49. Parašykite MongoDB užklausą, kuri surastų visus restoranus, kurie turi bent po vieną grade A ir B. Pateikite tų restoranų name ir address.
+
+db.restaurants.find(
+  {$and:[
+      {"grades.grade": "A"},
+      {"grades.grade": "B"}
+    ]
+  },
+  {
+    _id: 0,
+    name: 1,
+    address: 1
+  }
+)
+
+50. Parašykite MongoDB užklausą, kuri surastų visus restoranus, kurie turi žodį 'coffee' savo pavadinime. Pateikite tų restoranų name ir address.
+
+db.restaurants.find(
+  {$and:[
+      {"grades.grade": "A"},
+      {"grades.grade": "B"}
+    ]
+  },
+  {
+    _id: 0,
+    name: 1,
+    address: 1,
+  }
+)
+
+51. Parašykite MongoDB užklausą, kuri surastų visus restoranus, kurių zipcode prasideda su 10. Pateikite tų restoranų name ir address.
+
+db.restaurants.find(
+  {"address.zipcode": /^10/},
+  {
+    _id: 0,
+    name: 1,
+    address: 1,
+  }
+)
+
+
+52. Parašykite MongoDB užklausą, kuri surastų visus restoranus, kurių cuisine prasideda raide B. Pateikite tų restoranų name ir address.
+
+db.restaurants.find(
+  {borough: /^B/},
+  {
+    _id: 0,
+    name: 1,
+    address: 1
+  }
+)
+
+53. Parašykite MongoDB užklausą, kuri surastų visus restoranus, kurių cuisine baigiasi raide y. Pateikite tų restoranų name ir address.
+
+db.restaurants.find(
+  {cuisine: /y$/},
+  {
+    _id: 0,
+    name: 1,
+    address: 1
+  }
+)
+
+54. Parašykite MongoDB užklausą, kuri surastų visus restoranus, kurių cuisine turi žodį 'Pizza'. Pateikite tų restoranų name, address ir cuisine.
+
+db.restaurants.find(
+  {cuisine: /pizza\w/i},
+  {
+    _id: 0,
+    name: 1,
+    address: 1,
+    cuisine:1
+  }
+)
+
+55. Parašykite MongoDB užklausą, kuri surastų top 10 restoranų pagal score vidurkį. Pateikite tų restoranų name, address ir cuisine.
+
+db.restaurants.aggregate([
+  {
+    $project: {
+      name: 1,
+      address: 1,
+      cuisine: 1,
+      average_score: { $avg: "$grades.score" }
+    }
+  },
+  {
+    $sort: { average_score: -1 }
+  },
+  {
+    $limit: 10
+  }
+])
+
+56. Parašykite MongoDB užklausą, kuri surastų restoraną su aukščiausiu score vidurkiu su cuisine Turkish. 
+
+db.restaurants.aggregate([
+  {
+    $match: {
+      cuisine: "Turkish"
+    }
+  },
+  {
+    $project: {
+      name: 1,
+      address: 1,
+      average_score: { $avg: "$grades.score" }
+    }
+  },
+  {
+    $sort: { average_score: -1 }
+  },
+  {
+    $limit: 1
+  }
+])
+
+57. Parašykite MongoDB užklausą, kuri surastų top 10 restoranų pagal didžiausią bendrą score. Pateikite tų restoranų name, address ir cuisine.
+
+db.restaurants.aggregate([
+  {
+    $project: {
+      name: 1,
+      address: 1,
+      cuisine: 1,
+      total_score: { $sum: "$grades.score" }
+    }
+  },
+  {
+    $sort: { total_score: -1 }
+  },
+  {
+    $limit: 10
+  }
+])
+
+58. Parašykite MongoDB užklausą, kuri surastų visus Chinese restoranus Brooklyn'e.
+
+db.restaurants.find({
+  cuisine: "Chinese",
+  borough: "Brooklyn"
+})
+
+59. Parašykite MongoDB užklausą, kuri surastų restoraną su pačia naujausia grade data.
+
+db.restaurants.find({"grades.date":{$exists: true}}).sort({"grades.date": -1}).limit(1)
+
+
+60. Parašykite MongoDB užklausą, kuri surastų top 5 restoranus su aukščiausiu score vidurkiu pagal kiekvieną cuisine. Pateikite tų restoranų name, address, cuisine ir score vidurkį.
+
+db.restaurants.aggregate([
+  { $project: { name: 1, address: 1, cuisine: 1, average_score: { $avg: "$grades.score" } } },
+  { $sort: { cuisine: 1, average_score: -1 } },
+  { $group: {
+      _id: "$cuisine",
+      top_restaurants: { $push: { name: "$name", address: "$address", average_score: "$average_score" } }
+    }
+  },
+  { $project: {
+      _id: 0,
+      cuisine: "$_id",
+      top_restaurants: { $slice: [ "$top_restaurants", 5 ] }
+    }
+  }
+])

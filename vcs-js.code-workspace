@@ -1,0 +1,23 @@
+{
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "path": "../Jacob-page"
+    },
+    {
+      "path": "../git-test"
+    },
+    {
+      "path": "../JS-pagrindai-testas"
+    },
+    {
+      "name": "it-agentura-projektas",
+      "path": "43-projektelis/it-agentura-projektas"
+    }
+  ],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "vcs-js"
+  }
+}

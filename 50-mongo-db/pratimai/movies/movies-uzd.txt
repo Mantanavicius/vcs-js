@@ -1,0 +1,312 @@
+1. Parašykite MongoDB užklausą, kuri surastų visą informaciją apie visus filmus, kurie buvo išleisti 1893 metais.
+
+db.movies.find({year:1893})
+
+2. Parašykite MongoDB užklausą, kuri surastų visą informaciją apie visus filmus, kurių trukmė yra ilgesnė nei 120 min.
+
+db.movies.find({runtime:{$gt:120}})
+
+3. Parašykite MongoDB užklausą, kuri surastų visą informaciją apie visus filmus, kurių žanras yra Short.
+
+db.movies.find({genres:"Short"})
+
+4. Parašykite MongoDB užklausą, kuri surastų visą informaciją apie visus filmus, kuriuos režisavo William K. L. Dickson.
+
+db.movies.find({directors:"William K.L. Dickson"})
+
+5. Parašykite MongoDB užklausą, kuri surastų visą informaciją apie visus filmus, kurie buvo išleisti JAV.
+
+db.movies.find({countries: "USA"})
+
+6. Parašykite MongoDB užklausą, kuri surastų visą informaciją apie visus filmus, kurie yra UNRATED.
+
+db.movies.find({rated: /UNRATED/i})
+
+7. Parašykite MongoDB užklausą, kuri surastų visą informaciją apie visus filmus, kurie turi daugiau nei 1000 IMDB votes.
+
+db.movies.find({"imdb.votes": {$gt: 1000}})
+
+8. Parašykite MongoDB užklausą, kuri surastų visą informaciją apie visus filmus, kurių IMDB rating yra didesnis už 7.
+
+db.movies.find({"imdb.rating": {$gt: 7}})
+
+9. Parašykite MongoDB užklausą, kuri surastų visą informaciją apie visus filmus, kurių Tomatoes viewer rating yra didesnis už 4.
+
+db.movies.find({"tomatoes.viewer.rating": {$gt: 4}})
+
+10. Parašykite MongoDB užklausą, kuri surastų visus filmus, gavusius apdovanojimus. Pateikite filmų pavadinimus ir jų apdovanojimus.
+
+db.movies.find({"awards.wins": {$gt: 0}}, {_id:0, title:1, "awards.wins":1})
+
+11. Parašykite MongoDB užklausą, kuri surastų title, languages, released, directors, writers, awards, year, genres, runtime, cast, countries visų filmų gavusių bent vieną nominaciją.
+
+db.movies
+.find({"awards.nominations": {$gt: 0}}, 
+    {_id:0,
+    title:1,
+    languages:1,
+    released:1,
+    directors:1,
+    writers:1,
+    awards:1,
+    year:1,
+    genres:1,
+    runtime:1,
+    cast:1,
+    countries:1
+})
+
+12. Parašykite MongoDB užklausą, kuri surastų title, languages, released, directors, writers, awards, year, genres, runtime, cast, countries visų filmų, kurių cast turi Charles Kayser.
+
+db.movies
+.find({cast: "Charles Kayser"}, 
+	{_id:0,
+	title:1,
+	languages:1,
+	released:1,
+	directors:1,
+	writers:1,
+	awards:1,
+	year:1,
+	genres:1,
+	runtime:1,
+	cast:1,
+	countries:1
+})
+
+13. Parašykite MongoDB užklausą, kuri surastų title, languages, released, directors, writers, countries visų filmų, kurie buvo išleisti 1893-05-09.
+
+db.movies
+.find({released: ISODate("1893-05-09T00:00:00.000+00:00")}, 
+	{_id:0,
+	title:1,
+	languages:1,
+	released:1,
+	directors:1,
+	writers:1,
+	countries:1
+})
+
+14. Parašykite MongoDB užklausą, kuri surastų title, languages, released, directors, writers, countries visų filmų, kurių pavadinime yra žodis 'scene'.
+
+db.movies
+.find({title: /scene\b/i}, 
+	{_id:0,
+	title:1,
+	languages:1,
+	released:1,
+	directors:1,
+	writers:1,
+	countries:1
+})
+
+15. Parašykite MongoDB užklausą, kuri surastų title, languages, released, directors, viewer, writers, countries visų filmų, kurių Tomatoes viewer rating yra 3 arba 4.
+
+db.movies
+.find({"tomatoes.viewer.rating": {$in: [3,4]}}, 
+	{_id:0,
+	title:1,
+	languages:1,
+	released:1,
+	directors:1,
+	writers:1,
+	countries:1
+})
+
+16. Parašykite MongoDB užklausą, kuri surastų title, languages, released, year, directors, writers, countries visų filmų, kurie buvo išleisti iki 1900.
+
+db.movies
+.find({year: {$lt: 1900}}, 
+	{_id:0,
+	title:1,
+	languages:1,
+	released:1,
+	year:1,
+	directors:1,
+	writers:1,
+	countries:1
+})
+
+17. Parašykite MongoDB užklausą, kuri surastų title, languages, fullplot, released, directors, writers, countries visų filmų, kurių fullplot yra žodis 'fire'.
+
+db.movies
+.find({fullplot: /fire\b/i}, 
+	{_id:0,
+	title:1,
+	languages:1,
+	fullplot:1,
+	released:1,
+	directors:1,
+	writers:1,
+	countries:1
+})
+
+18. Parašykite MongoDB užklausą, kuri surastų title, languages, plot, released, directors, writers, countries visų filmų, kurių plot yra žodis 'beer'.
+
+db.movies
+.find({plot: /beer\b/i}, 
+	{_id:0,
+	title:1,
+	languages:1,
+	plot:1,
+	released:1,
+	directors:1,
+	writers:1,
+	countries:1
+})
+
+19. Parašykite MongoDB užklausą, kuri surastų title, languages, fullplot, released, directors, writers, countries visų filmų, kurių fullplot yra žodis 'metal'.
+
+db.movies
+.find({fullplot: /metal\b/i}, 
+	{_id:0,
+	title:1,
+	languages:1,
+	fullplot:1,
+	released:1,
+	directors:1,
+	writers:1,
+	countries:1
+})
+
+20. Parašykite MongoDB užklausą, kuri surastų title, languages, fullplot, released, directors, writers, countries visų filmų, kurių trukmė yra tarp 60 ir 90 min.
+
+db.movies
+.find({$and:[
+{runtime: {$gte: 60}},
+{runtime: {$lte: 90}}
+]},{
+	_id:0,
+	title:1,
+	languages:1,
+	fullplot:1,
+	released:1,
+	directors:1,
+	writers:1,
+	countries:1
+})
+
+21. Parašykite MongoDB užklausą, kuri surastų title, languages, released, runtime, directors, writers, countries, imdb top 5 filmų pagal aukščiausią IMDB rating.
+
+db.movies
+.find({"imdb.rating":{$lte:10}},{
+	_id:0,
+	title:1,
+	languages:1,
+	released:1,
+	runtime:1,
+	directors:1,
+	writers:1,
+	countries:1,
+}).sort({"imdb.rating": -1}).limit(5)
+
+22. Parašykite MongoDB užklausą, kuri surastų runtime vidurkį kiekvienoje valstybėje.
+
+db.movies.aggregate([
+  {
+    $unwind: "$countries"
+  },
+  {
+    $group: {
+      _id: "$countries",
+      averageRuntime: { $avg: "$runtime" }
+    }
+  },
+  {
+    $sort: { _id: 1 }
+  }
+])
+
+
+23. Parašykite MongoDB užklausą, kuri surastų dažniausiai pasitaikantį žanrą filmuose.
+
+db.movies.aggregate([
+  {
+    $unwind: "$genres"
+  },
+  {
+    $group: {
+      _id: "$genres",
+      count: { $sum: 1 }
+    }
+  },
+  {
+    $sort: { count: -1 }
+  },
+  {
+    $limit: 1
+  },
+  {
+    $project: {
+      _id: 0,
+      genre: "$_id",
+      count: 1
+    }
+  }
+])
+
+24. Parašykite MongoDB užklausą, kuri surastų visus filmus, kurie buvo išleisti tais metais, kurie turėjo aukščiausią IMDB rating vidurkį.
+
+db.movies.aggregate([
+  {$group: {
+		_id: "$year",
+		title: {$first: "$title"},
+		rating: {$max: "$imdb.rating"}
+	}},
+  	{$sort: {"_id":1}},
+ 	{$project:{
+		_id:0,
+		year: "$_id",
+		title:1,
+		rating:1
+	}
+}])
+
+25. Parašykite MongoDB užklausą, kuri surastų top 10 režisierių, turinčių didžiausią filmų kiekį.
+
+db.movies.aggregate([
+  {$unwind: "$directors"},
+  {$group:{
+		_id: "$directors",
+		count: { $sum:1 }
+	}},
+	{$sort: {count:-1}},
+  	{$limit: 10},
+  	{$project:{
+		_id: 0,
+		director: "$_id",
+		count: 1 
+	}}
+])
+
+26. Parašykite MongoDB užklausą, kuri surastų IMDB ratingo vidurkį pagal PG, R, G ir t.t.
+
+db.movies.aggregate([
+  {$group: {
+		_id: "$rated",
+		avgRating: {$avg: "$imdb.rating"}
+	}},
+ 	{$sort: {avgRating: -1}},
+  	{$project: {
+	_id:0,
+	rating: "$_id",
+	avgRating: 1
+	}}
+])
+
+27. Parašykite MongoDB užklausą, kuri surastų seniausią filmą, turintį apdovanojimą.
+
+db.movies.find({"awards.wins": {$gt:0}, type: "movie"}).sort({year:1}).limit(1)
+
+28. Parašykite MongoDB užklausą, kuri surastų filmą, turintį aukščiausią IMDB ir Tomatoes viewer reitingus.
+
+db.movies.find({
+  "imdb.rating": { $lte: 10 },
+  "tomatoes.viewer.rating": { $lte: 5 },
+	type: "movie"
+})
+.sort({
+  "imdb.rating": -1,
+  "tomatoes.viewer.rating": -1 
+})
+.limit(1)
